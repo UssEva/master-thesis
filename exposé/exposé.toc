@@ -1,8 +1,0 @@
-\selectlanguage *{english}
-\selectlanguage *{english}
-\contentsline {chapter}{\numberline {1}Problem}{1}{}%
-\contentsline {chapter}{\numberline {2}State of the art}{2}{}%
-\contentsline {chapter}{\numberline {3}Research questions}{3}{}%
-\contentsline {chapter}{\numberline {4}Evaluation}{4}{}%
-\contentsline {chapter}{\numberline {5}Schedule}{5}{}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
