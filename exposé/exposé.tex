@@ -78,7 +78,8 @@
 
 
 % Title
-\title{Scratch Bug Detection Using the N-gram Language Model}
+% working title
+\title{IT Security}
 
 % Author
 \author{Eva Gründinger}
@@ -109,60 +110,26 @@
 
     \mainmatter
 
-    \chapter{Problem}\label{ch:problem}
-    In order to improve code quality and reliability of programs, many rule-based techniques have been researched to detect bugs and code smells. However, these rule-based approaches are relying on highly frequent patterns in the code. 
-    
-    In this bachelor thesis a different technique that uses \ngram{s} to automatically detect bugs in \scratch{} programs is proposed. This way of approaching the detection of defective code is already successfully applied by \bugram{}~\cite{bugram} on \java{} code. Token sequences of programs are assessed by their probability in the learned model while low probability ones are marked as bugs. The assumption is that low probability token sequences are unusual, which may indicate bugs, bad practices or special uses of code. 
-    
-    For bug detection the four main components that need to be configured for the model are: \textit{Gram Size, Sequence Length, Reporting Size and Minimum Token Occurrence}. After adjusting these settings, the n-gram Markov model is able to obtain the probabilities of all token sequences. Token sequences in \scratch{} consist of blocks that can be arranged by the user with drag-and-drop. The probability of each block in a sequence is only determined by its previous n-1 tokens. Using a 3-gram model the probability of the sequence s is:
-    \(P(s) = P(b_{1})P(b_{2}\mid b_{1})P(b_{3}\mid b_{1}b_{2})P(b_{4}\mid b_{2}b_{3}) \). Then the language model ranks the outcome based on the probabilities in descending order and reports the sequences with the lowest probabilities as potential bugs. 
-    
+    \chapter{Problem}\label{ch:problem}    
 
     \chapter{State of the art}\label{ch:state-of-the-art}
-    
-    \section{Analyzing Scratch programs}\label{sec:analyzing-scratch}
-    The tools \drscratch{}~\cite{drscratch} as well as \hairball{}~\cite{hairball} analyze \scratch{} programs to find bugs and code smells. These are then reported to the user in order to improve the computational thinking and coding skills of novice programmers. Bad programming habits were assessed in a preliminary study by Moreno et al.~\cite{badhabits} and code smells that are very common in Scratch were analyzed by Vargas-Alba et al.~\cite{badsmells}. Stahlbauer et al.~\cite{whisker} introduced \whisker{} which is a formal testing framework for Scratch. \litterbox, a tool created by Frädrich et al.~\cite{scratch_bugpatterns} that creates an AST of \scratch{} programs, is used for finding code smells as well as bug patterns. In this bachelor thesis, the goal is to enhance \litterbox{} by finding bugs with a \ngram{} instead of bug patterns and rules like all tools mentioned above are already able to do.
-    
-
-    \section{N-gram language models}\label{sec:language-models}
-    Hindle et al.~\cite{naturalness} first introduced the \ngram{} to show that software source code is highly repetitive and the \ngram{} can be used in code suggestion and completion. This work is the basis for using language models to model source code and demonstrated how they could be used in software tools. A very accurate algorithm by using a Hidden Markov Model for code completion was proposed by Han et al.~\cite{codecompletion}. SLAMC by Nguyen et al.~\cite{SLAMC}, which incorporated semantic information into a n-gram model, presented a method to code suggestion. It demonstrated how tokens can be seen more semantically instead of just syntactically. Raychev et al.~\cite{SLANG} investigated the effectiveness of various language models for code completion, i.e., n-gram and recurrent neural networks. By combining program analysis and the n-gram model, they proposed SLANG, which had the goal to predict the sequence of method calls in a software system. This work leverages the \ngram{} on a new domain - software defect detection in \scratch{}.
-    
-
-    \section{Automatic bug detection}\label{sec:bugram}
-    Wang et al.~\cite{bugram} demonstrated with their tool \bugram{} that \ngram{s} can be used to find defective code in \java{} programs. Although there are other studies that covered the usage of n-grams for detecting clone bugs~\cite{clonebugs}, localizing faults~\cite{faults} and code search~\cite{codesearch}, these did not leverage n-gram models. In contrast to n-grams that are only token sequences and were primarily used in the papers mentioned above, n-gram models are Markov models built on n-grams. The bachelor thesis will try to adapt this mechanism for Scratch projects.
 
     \chapter{Research questions}\label{ch:research-questions}
     The thesis aims to answer the following research questions:
 
     \begin{description}
-        \item[RQ 1] What is the optimal gram size of the language model?
-        \item[RQ 2] How long should the sequences be?
-        \item[RQ 3] How many bugs are found in comparison to \litterbox{}?
-        \item[RQ 4] What kind of violations are found?
+        \item[RQ 1]
+        \item[RQ 2] 
+        \item[RQ 3] 
     \end{description}
 
 
     \chapter{Evaluation}\label{ch:evaluation}
     
-    Implement a visitor for \ngram{s} in \litterbox{}. Use a big set of \scratch{3} projects to study the impact of different parameters on the performance.  
-    
     \begin{description}
-        \item[RQ 1 What is the optimal gram size of the language model?] N-gram models for each project are built with the gram size ranging from two to ten. Calculate the probabilities of all token sequences and rank them based on their probabilities in descending order. Then examine the bottom 10 sequences of each n-gram model and verify whether a token sequence contains a bug or not. Choose gram size with most found bugs.
-        \item[RQ 2 How long should the sequences be?]
-        Use sequence lengths ranging from two to ten. For each built a n-gram model with the optimal gram size from [RQ 1]. Calculate probabilities from all sequences and rank them. 
-        % Threshold for maximal probability for sequences
-        Examine the bottom 10 sequences with low probabilities to check how many true bugs are detected. Choose sequence length with most found bugs.
-    \end{description}
-
-	% Reporting size (10-30?) and minimum token occurrence (2?) are fix.
-
-	Take another set of \scratch{3} projects from our database that can be manually verified.
-	
-    \begin{description}
-    	\item[RQ 3 How many bugs are found in comparison to \litterbox{}?] 
-    	Use \litterbox{} to find bugs in the set and count how many of these bugs the \ngram{} can detect as well. 
-        \item[RQ 4 What kind of violations are found?] 
-        Analyze if \ngram{} found bugs that are not detected by \litterbox{}. Classify the defective code into these categories: \textit{True Bugs, Refactoring Opportunities or False Positives}. 
+        \item[RQ 1] 
+        \item[RQ 2]
+       	\item[RQ 3] 
     \end{description}
  
  
@@ -170,24 +137,18 @@
  	
  	\begin{table}[ht]
  		\label{tab:schedule}
- 		\caption{Schedule for bachelor thesis}
+ 		\caption{Schedule for master thesis}
  		\begin{tabular}{p{1cm}p{3cm}p{3cm}p{8cm}}
  			Weeks & Time slot & Phase & Tasks \\
  			\hline
- 			1 & 23.03. - 29.03. & Preparation & Setup \latex{} outline, \litterbox{} branch, Search papers \\
- 			3 & 30.03. - 19.04. & Programming & Build \ngram{} tool: Tokenization, Calculate probabilities for sequences, Rank results and report bugs\\
- 			3 & 20.04. - 10.05. & Evaluation & Find optimal parameters for model, Analyze reported bugs with the help of \litterbox{}\\
- 			3 & 11.05. - 31.05. & Writing & Structure, Research Questions, Main body, Introduction, Conclusion \\
- 			1.5 & 01.06. - 10.06. & Correction & Bibliography, Content, Grammar \\
- 			0.5 & 11.06. - 14.06. & Submission & Print and bind bachelor thesis\\
+ 			2 & 17.03. - 31.03. & Preparation & Setup \latex{} outline, Search papers, Write Exposé \\
+ 			2 & 01.04. - 15.04. & Familiarization & Prepare papers, Structure thesis, Write time table \\
+ 			8 & 16.04. - 10.06. & Evaluation & Analyze findings \\
+ 			11 & 11.06. - 27.08. & Writing & Structure, Research Questions, Main body, Introduction, Conclusion \\
+ 			2 & 28.08. - 11.09. & Submission & Corrections, Print and bind master thesis \\
  			\hline
  		\end{tabular}
  	\end{table}
- 
- 	\begin{figure}
- 		\centering
- 		\includegraphics[width=8cm]{./images/scratch.jpg}
- 	\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
