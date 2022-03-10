@@ -1,0 +1,1890 @@
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 22.1) (format=lualatex 2022.3.10)  10 MAR 2022 14:25
+ restricted system commands enabled.
+**exposé.tex
+(./exposé.tex
+LaTeX2e <2021-11-15> patch level 1
+Lua module: luaotfload 2022-02-27 3.20 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "C:/Users/evagr/AppData/Local/MiKTeX
+/2.9/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2022-02-24.lua" from kpse-res
+olved path "C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/luatex/luaotflo
+ad/fontloader-2022-02-24.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.119
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/Users/evagr/AppData/Local/MiKTeX
+/2.9/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' at position 1 in `glyph_stream_provider'
+.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2022-02-24>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'.
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrboo
+k.cls"
+Document Class: scrbook 2021/11/13 v3.35 KOMA-Script document class (book)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrkba
+se.sty"
+Package: scrkbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrbas
+e.sty"
+Package: scrbase 2021/11/13 v3.35 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrlfi
+le.sty"
+Package: scrlfile 2021/11/13 v3.35 KOMA-Script package (file load hooks)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrlfi
+le-hook.sty"
+Package: scrlfile-hook 2021/11/13 v3.35 KOMA-Script package (using LaTeX hooks)
+
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrlog
+o.sty"
+Package: scrlogo 2021/11/13 v3.35 KOMA-Script package (logo)
+)))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/tocbas
+ic.sty"
+Package: tocbasic 2021/11/13 v3.35 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box50
+)
+Package tocbasic Info: babel extension for `toc' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 137.
+Class scrbook Info: You've used standard option `oneside'.
+(scrbook)           This is correct!
+(scrbook)           Internally I'm using `twoside=false'.
+(scrbook)           If you'd like to set the option with \KOMAoptions,
+(scrbook)           you'd have to use `twoside=false' there
+(scrbook)           instead of `oneside', too.
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
+ne 2490.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrsiz
+e12pt.clo"
+File: scrsize12pt.clo 2021/11/13 v3.35 KOMA-Script font size class option (12pt
+)
+luaotfload | db : Font names database loaded from C:/Users/evagr/AppData/Local/M
+iKTeX/2.9/luatex-cache/generic/names/luaotfload-names.luc.gz)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/typear
+ea.sty"
+Package: typearea 2021/11/13 v3.35 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count183
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 635.5pt
+(typearea)              \topmargin      = -41.72441pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1743.
+)
+\c@part=\count184
+\c@chapter=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\scr@dte@chapter@maxnumwidth=\skip53
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\chapter on input line 5715.
+\scr@dte@section@maxnumwidth=\skip54
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\section on input line 5726.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\section on input line 5726.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrbook Info: using compatibility default `afterindent=true'
+(scrbook)           for `\part on input line 5735.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsection on input line 5745.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsection on input line 5745.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsubsection on input line 5755.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsubsection on input line 5755.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\paragraph on input line 5766.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\paragraph on input line 5766.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subparagraph on input line 5776.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subparagraph on input line 5776.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box51
+Package tocbasic Info: babel extension for `lof' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6962.
+
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count191
+Package tocbasic Info: babel extension for `lot' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6978.
+
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count192
+Class scrbook Info: Redefining `\numberline' on input line 7146.
+\bibindent=\dimen137
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/babel.sty"
+Package: babel 2022/02/26 3.73 The Babel package
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/luababel.d
+ef"
+\bbl@readstream=\read2
+\l@afrikaans=\language2
+Package babel Info: Non-standard hyphenation setup on input line 118.
+\l@ancientgreek=\language3
+\l@arabic=\language4
+\l@armenian=\language5
+\l@assamese=\language6
+\l@basque=\language7
+\l@belarusian=\language8
+\l@bengali=\language9
+\l@bokmal=\language10
+\l@bulgarian=\language11
+\l@catalan=\language12
+\l@churchslavonic=\language13
+\l@classiclatin=\language14
+\l@coptic=\language15
+\l@croatian=\language16
+\l@czech=\language17
+\l@danish=\language18
+\l@dutch=\language19
+\l@esperanto=\language20
+\l@estonian=\language21
+\l@ethiopic=\language22
+\l@farsi=\language23
+\l@finnish=\language24
+\l@french=\language25
+\l@friulan=\language26
+\l@galician=\language27
+\l@georgian=\language28
+\l@german=\language29
+\l@german-x-2021-02-26=\language30
+\l@greek=\language31
+\l@gujarati=\language32
+\l@hindi=\language33
+\l@hungarian=\language34
+\l@icelandic=\language35
+\l@indonesian=\language36
+\l@interlingua=\language37
+\l@irish=\language38
+\l@italian=\language39
+\l@kannada=\language40
+\l@kurmanji=\language41
+\l@latin=\language42
+\l@latvian=\language43
+\l@lithuanian=\language44
+\l@liturgicallatin=\language45
+\l@macedonian=\language46
+\l@malayalam=\language47
+\l@marathi=\language48
+\l@mongolian=\language49
+\l@mongolianlmc=\language50
+\l@monogreek=\language51
+\l@ngerman=\language52
+\l@ngerman-x-2021-02-26=\language53
+\l@nynorsk=\language54
+\l@occitan=\language55
+\l@oriya=\language56
+\l@pali=\language57
+\l@panjabi=\language58
+\l@piedmontese=\language59
+\l@polish=\language60
+\l@portuguese=\language61
+\l@romanian=\language62
+\l@romansh=\language63
+\l@russian=\language64
+\l@sanskrit=\language65
+\l@serbian=\language66
+\l@serbianc=\language67
+\l@slovak=\language68
+\l@slovenian=\language69
+\l@spanish=\language70
+\l@swedish=\language71
+\l@swissgerman=\language72
+\l@tamil=\language73
+\l@telugu=\language74
+\l@thai=\language75
+\l@turkish=\language76
+\l@turkmen=\language77
+\l@ukenglish=\language78
+\l@ukrainian=\language79
+\l@uppersorbian=\language80
+\l@usenglishmax=\language81
+\l@welsh=\language82
+\babelcatcodetablenum=\catcodetable12
+\bbl@pattcodes=\catcodetable13
+)
+\babel@savecnt=\count193
+\U@D=\dimen138
+\l@unhyphenated=\language83
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/babel/luababel.d
+ef"
+\bbl@attr@locale=\attribute4
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-german/ngerm
+an.ldf"
+Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthogra
+phy)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/babel-german/ngerm
+anb.ldf"
+Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthogr
+aphy)
+Package babel Info: Making " an active character on input line 122.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/hyph-utf8/loadhy
+ph/loadhyph-de-1996.tex"
+UTF-8 German hyphenation patterns (reformed orthography)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/hyph-utf8/patter
+ns/tex/hyph-de-1996.tex"
+German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2021-02-26
+ (WL))))))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/algorithmicx/algor
+ithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ifthen.sty"
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count194
+\c@ALG@rem=\count195
+\c@ALG@nested=\count196
+\ALG@tlm=\skip64
+\ALG@thistlm=\skip65
+\c@ALG@Lnr=\count197
+\c@ALG@blocknr=\count198
+\c@ALG@storecount=\count199
+\c@ALG@tmpcounter=\count266
+\ALG@tmplength=\skip66
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/algorithms/algorit
+hm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/float/float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count267
+\float@exts=\toks17
+\float@box=\box52
+\@float@everytoks=\toks18
+\@floatcapt=\box53
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count268
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/algorithmicx/algps
+eudocode.sty"
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphicx.
+sty"
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/graphics.
+sty"
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/trig.sty"
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/luate
+x.def"
+File: luatex.def 2021/06/01 v1.2c Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/array.sty"
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen141
+\ar@mcellbox=\box54
+\extrarowheight=\dimen142
+\NC@list=\toks20
+\extratabsurround=\skip67
+\backup@length=\skip68
+\ar@cellbox=\box55
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgfplots/pgfplots.
+sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.revision.tex")
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlayer/
+tikz.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgf
+.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgfr
+cs.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+futil-common.tex"
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen143
+\pgfutil@tempdimb=\dimen144
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+futil-common-lists.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+futil-latex.def"
+\pgfutil@abb=\box56
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+frcs.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/pgf.revision
+.tex")
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/basiclayer/pgf
+core.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/systemlayer/pg
+fsys.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgfsys.code.tex"
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+fkeys.code.tex"
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+fkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen145
+\pgf@y=\dimen146
+\pgf@xa=\dimen147
+\pgf@ya=\dimen148
+\pgf@xb=\dimen149
+\pgf@yb=\dimen150
+\pgf@xc=\dimen151
+\pgf@yc=\dimen152
+\pgf@xd=\dimen153
+\pgf@yd=\dimen154
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count269
+\c@pgf@countb=\count270
+\c@pgf@countc=\count271
+\c@pgf@countd=\count272
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count273
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgf.cfg"
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgfsys-luatex.def"
+File: pgfsys-luatex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count274
+\pgfsyssoftpath@bigbuffer@items=\count275
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/systemlayer/
+pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty"
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcore.code.tex"
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+calc.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+util.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+parser.code.tex"
+\pgfmath@dimen=\dimen155
+\pgfmath@count=\count276
+\pgfmath@box=\box57
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.basic.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.trigonometric.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.random.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.comparison.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.base.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.round.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.misc.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+functions.integerarithmetics.code.tex")))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+float.code.tex"
+\c@pgfmathroundto@lastzeros=\count277
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfint.
+code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen156
+\pgf@picmaxx=\dimen157
+\pgf@picminy=\dimen158
+\pgf@picmaxy=\dimen159
+\pgf@pathminx=\dimen160
+\pgf@pathmaxx=\dimen161
+\pgf@pathminy=\dimen162
+\pgf@pathmaxy=\dimen163
+\pgf@xx=\dimen164
+\pgf@xy=\dimen165
+\pgf@yx=\dimen166
+\pgf@yy=\dimen167
+\pgf@zx=\dimen168
+\pgf@zy=\dimen169
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen170
+\pgf@path@lasty=\dimen171
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen172
+\pgf@shorten@start@additional=\dimen173
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count278
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen174
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen175
+\pgf@pt@y=\dimen176
+\pgf@pt@temp=\dimen177
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorequick.code.tex"
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen178
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen179
+\pgf@sys@shading@range@num=\count279
+\pgf@shadingcount=\count280
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box61
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/basiclayer/p
+gfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modules/pgfm
+oduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box62
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modules/pgfm
+oduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/compatibility/
+pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen180
+\pgf@nodesepend=\dimen181
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/compatibility/
+pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgff
+or.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/utilities/pgfk
+eys.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+fkeys.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/math/pgfmath.s
+ty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/utilities/pg
+ffor.code.tex"
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/math/pgfmath
+.code.tex")
+\pgffor@iter=\dimen182
+\pgffor@skip=\dimen183
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/tikz.code.tex"
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pg
+flibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count281
+\pgfplotmarksize=\dimen184
+)
+\tikz@lastx=\dimen185
+\tikz@lasty=\dimen186
+\tikz@lastxsaved=\dimen187
+\tikz@lastysaved=\dimen188
+\tikz@lastmovetox=\dimen189
+\tikz@lastmovetoy=\dimen190
+\tikzleveldistance=\dimen191
+\tikzsiblingdistance=\dimen192
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count282
+\tikznumberofchildren=\count283
+\tikznumberofcurrentchild=\count284
+\tikz@fig@count=\count285
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modules/pgfm
+odulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count286
+\pgfmatrixcurrentcolumn=\count287
+\pgf@matrix@numberofcolumns=\count288
+)
+\tikz@expandcount=\count289
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+score.code.tex"
+Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
+\pgfplots@luabackend@table=\catcodetable14
+\t@pgfplots@toka=\toks33
+\t@pgfplots@tokb=\toks34
+\t@pgfplots@tokc=\toks35
+\pgfplots@tmpa=\dimen193
+\c@pgfplots@coordindex=\count290
+\c@pgfplots@scanlineindex=\count291
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/sys/pgf
+plotssysgeneric.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/libs/pg
+fplotslibrary.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/oldpgfc
+ompatib/pgfplotsoldpgfsupp_loader.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pg
+flibraryfpu.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/lu
+amath/pgflibraryluamath.code.tex")
+Package pgfplots info on input line 290: luamath library shipped with pgf 3.1.9
+a is up-to-date
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotsutil.code.tex"
+Package pgfplots info on input line 82: Found new luatex: initializing lua comm
+ands instead of write18 (shell-escape)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/liststr
+ucture/pgfplotsliststructure.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/liststr
+ucture/pgfplotsliststructureext.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/liststr
+ucture/pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count292
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/liststr
+ucture/pgfplotsmatrix.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/numtabl
+e/pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count293
+\t@pgfplotstable@a=\toks36
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/liststr
+ucture/pgfplotsdeque.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotsbinary.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotsbinary.data.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotsutil.verb.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/libs/pg
+flibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count294
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/sys/pgf
+librarypgfplots.surfshading.pgfsys-luatex.def")))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotscolormap.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/util/pg
+fplotscolor.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+sstackedplots.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+splothandlers.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+smeshplothandler.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+smeshplotimage.code.tex")))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.scaling.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+scoordprocessing.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.errorbars.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.markers.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+sticks.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/pgfplot
+s.paths.code.tex")
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzlibrarydecorations.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/modules/pgfm
+oduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen194
+\pgfdecoratedremainingdistance=\dimen195
+\pgfdecoratedinputsegmentcompleteddistance=\dimen196
+\pgfdecoratedinputsegmentremainingdistance=\dimen197
+\pgf@decorate@distancetomove=\dimen198
+\pgf@decorate@repeatstate=\count295
+\pgfdecorationsegmentamplitude=\dimen199
+\pgfdecorationsegmentlength=\dimen256
+)
+\tikz@lib@dec@box=\box67
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/de
+corations/pgflibrarydecorations.pathmorphing.code.tex"))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/de
+corations/pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count296
+\pgfplots@xmin@reg=\dimen257
+\pgfplots@xmax@reg=\dimen258
+\pgfplots@ymin@reg=\dimen259
+\pgfplots@ymax@reg=\dimen260
+\pgfplots@zmin@reg=\dimen261
+\pgfplots@zmax@reg=\dimen262
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pg
+flibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgfplots/libs/ti
+kzlibrarypgfplots.external.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlayer/
+libraries/tikzlibraryexternal.code.tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pdftexcmds/pdfte
+xcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/infwarerr/infwar
+err.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/iftex/iftex.sty"
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ltxcmds/ltxcmds.
+sty"
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks37
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/atveryend-ltx
+.sty"
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlaye
+r/tikz/libraries/tikzexternalshared.code.tex")))
+\openout3 = exposé.auxlock
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/setspace/setspace.
+sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/polyglossia/polygl
+ossia.sty"
+Package: polyglossia 2021/04/12 v1.53 Modern multilingual typesetting with XeLa
+TeX and LuaLaTeX
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/etoolbox/etoolbox.
+sty"
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count297
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/makecmds/makecmds.
+sty"
+Package: makecmds 2009/09/03 v1.0a extra command making commands
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.st
+y"
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.
+tex"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/xkeyval/xkvutils
+.tex"
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+)
+\XKV@depth=\count298
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fontspec/fontspec.
+sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3packages/xparse/
+xparse.sty"
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3kernel/expl3.sty
+"
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3backend/l3backen
+d-luatex.def"
+File: l3backend-luatex.def 2022-02-07 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count299
+\l__pdf_internal_box=\box68
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fontspec/fontspec-
+luatex.sty"
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count300
+\l__fontspec_language_int=\count301
+\l__fontspec_strnum_int=\count302
+\l__fontspec_tmp_int=\count303
+\l__fontspec_tmpa_int=\count304
+\l__fontspec_tmpb_int=\count305
+\l__fontspec_tmpc_int=\count306
+\l__fontspec_em_int=\count307
+\l__fontspec_emdef_int=\count308
+\l__fontspec_strong_int=\count309
+\l__fontspec_strongdef_int=\count310
+\l__fontspec_tmpa_dim=\dimen263
+\l__fontspec_tmpb_dim=\dimen264
+\l__fontspec_tmpc_dim=\dimen265
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty"
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/fontspec/fontspec.
+cfg")))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/l3packages/l3keys2
+e/l3keys2e.sty"
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+
+LaTeX hooks Warning: Generic hook 'file/after/tracklang.sty' is deprecated.
+(hooks)              Use hook 'file/tracklang.sty/after' instead.
+
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/luatex/luatexbase/luatex
+base.sty"
+Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/luatex/ctablestack/ctabl
+estack.sty"
+Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
+\@catcodetablestackcnt=\count311
+)
+\CatcodeTableOther=\catcodetable15
+\CatcodeTableExpl=\catcodetable16
+)
+Lua module: polyglossia 2013/05/11 1.3 Polyglossia
+
+LaTeX hooks Warning: Generic hook 'package/after/bidi' is deprecated.
+(hooks)              Use hook 'package/bidi/after' instead.
+
+
+LaTeX hooks Warning: Generic hook 'package/after/luabidi' is deprecated.
+(hooks)              Use hook 'package/luabidi/after' instead.
+
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/polyglossia/gloss-
+latex.ldf"
+File: gloss-latex.ldf polyglossia: module for default language
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+)
+Package polyglossia Info: Default language is latex.
+Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz.
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/polyglossia/gloss-
+english.ldf"
+File: gloss-english.ldf polyglossia: module for english
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/script}  =>  {latin}
+>  {english/lcscript}  =>  {latin}
+>  {english/scripttag}  =>  {}
+>  {english/language}  =>  {English}
+>  {english/langtag}  =>  {ENG}
+>  {english/bcp47}  =>  {en-US}
+>  {english/hyphennames}  =>  {english,american,usenglish,USenglish}
+>  {english/direction}  =>  {LR}
+>  {english/hyphenmins}  =>  {2,3}
+>  {english/frenchspacing}  =>  {false}
+>  {english/indentfirst}  =>  {false}
+>  {english/fontsetup}  =>  {true}
+>  {english/envname}  =>  {english}
+>  {english/babelname}  =>  {english}
+>  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+Package polyglossia Info: Option: English, variant=american.
+)
+Package polyglossia Info: Default language is english.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/booktabs/booktabs.
+sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen266
+\lightrulewidth=\dimen267
+\cmidrulewidth=\dimen268
+\belowrulesep=\dimen269
+\belowbottomsep=\dimen270
+\aboverulesep=\dimen271
+\abovetopsep=\dimen272
+\cmidrulesep=\dimen273
+\cmidrulekern=\dimen274
+\defaultaddspace=\dimen275
+\@cmidla=\count312
+\@cmidlb=\count313
+\@aboverulesep=\dimen276
+\@belowrulesep=\dimen277
+\@thisruleclass=\count314
+\@lastruleclass=\count315
+\@thisrulewidth=\dimen278
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/multicol.sty
+"
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count316
+\mult@box=\box69
+\multicol@leftmargin=\dimen279
+\c@unbalance=\count317
+\c@collectmore=\count318
+\doublecol@number=\count319
+\multicoltolerance=\count320
+\multicolpretolerance=\count321
+\full@width=\dimen280
+\page@free=\dimen281
+\premulticols=\dimen282
+\postmulticols=\dimen283
+\multicolsep=\skip69
+\multicolbaselineskip=\skip70
+\partial@page=\box70
+\last@line=\box71
+\maxbalancingoverflow=\dimen284
+\mult@rightbox=\box72
+\mult@grightbox=\box73
+\mult@firstbox=\box74
+\mult@gfirstbox=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\c@minrows=\count322
+\c@columnbadness=\count323
+\c@finalcolumnbadness=\count324
+\last@try=\dimen285
+\multicolovershoot=\dimen286
+\multicolundershoot=\dimen287
+\mult@nat@firstbox=\box112
+\colbreak@box=\box113
+\mc@col@check@num=\count325
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/multirow/multirow.
+sty"
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip71
+\multirow@cntb=\count326
+\multirow@dima=\skip72
+\bigstrutjot=\dimen288
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrlay
+er-scrpage.sty"
+Package: scrlayer-scrpage 2021/11/13 v3.35 KOMA-Script package (end user interf
+ace for scrlayer)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrlay
+er.sty"
+Package: scrlayer 2021/11/13 v3.35 KOMA-Script package (defining layers and pag
+e styles)
+Package scrlayer Info: Using already defined \footheight
+(scrlayer)             hoping, that this is a length and
+(scrlayer)             not only a macro on input line 136.
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 216
+2.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1085.
+Package scrlayer-scrpage Info: deactivating warning for font element
+(scrlayer-scrpage)             `pagefoot' on input line 1109.
+)
+Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/biblatex.
+sty"
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/kvoptions/kvoption
+s.sty"
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/kvsetkeys/kvsetk
+eys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/logreq/logreq.sty"
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count327
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/logreq/logreq.def"
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) ("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty"
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count328
+\c@listtotal=\count329
+\c@listcount=\count330
+\c@liststart=\count331
+\c@liststop=\count332
+\c@citecount=\count333
+\c@citetotal=\count334
+\c@multicitecount=\count335
+\c@multicitetotal=\count336
+\c@instcount=\count337
+\c@maxnames=\count338
+\c@minnames=\count339
+\c@maxitems=\count340
+\c@minitems=\count341
+\c@citecounter=\count342
+\c@maxcitecounter=\count343
+\c@savedcitecounter=\count344
+\c@uniquelist=\count345
+\c@uniquename=\count346
+\c@refsection=\count347
+\c@refsegment=\count348
+\c@maxextratitle=\count349
+\c@maxextratitleyear=\count350
+\c@maxextraname=\count351
+\c@maxextradate=\count352
+\c@maxextraalpha=\count353
+\c@abbrvpenalty=\count354
+\c@highnamepenalty=\count355
+\c@lownamepenalty=\count356
+\c@maxparens=\count357
+\c@parenlevel=\count358
+\blx@tempcnta=\count359
+\blx@tempcntb=\count360
+\blx@tempcntc=\count361
+\c@blx@maxsection=\count362
+\c@blx@maxsegment@0=\count363
+\blx@notetype=\count364
+\blx@parenlevel@text=\count365
+\blx@parenlevel@foot=\count366
+\c@blx@sectionciteorder@0=\count367
+\blx@entrysetcounter=\count368
+\blx@biblioinstance=\count369
+\labelnumberwidth=\skip73
+\labelalphawidth=\skip74
+\biblabelsep=\skip75
+\bibitemsep=\skip76
+\bibnamesep=\skip77
+\bibinitsep=\skip78
+\bibparsep=\skip79
+\bibhang=\skip80
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language84
+\c@mincomprange=\count370
+\c@maxcomprange=\count371
+\c@mincompwidth=\count372
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/blx-dm.de
+f"
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex citestyle data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count373
+\c@savedafterword=\count374
+\c@annotator=\count375
+\c@savedannotator=\count376
+\c@author=\count377
+\c@savedauthor=\count378
+\c@bookauthor=\count379
+\c@savedbookauthor=\count380
+\c@commentator=\count381
+\c@savedcommentator=\count382
+\c@editor=\count383
+\c@savededitor=\count384
+\c@editora=\count385
+\c@savededitora=\count386
+\c@editorb=\count387
+\c@savededitorb=\count388
+\c@editorc=\count389
+\c@savededitorc=\count390
+\c@foreword=\count391
+\c@savedforeword=\count392
+\c@holder=\count393
+\c@savedholder=\count394
+\c@introduction=\count395
+\c@savedintroduction=\count396
+\c@namea=\count397
+\c@savednamea=\count398
+\c@nameb=\count399
+\c@savednameb=\count400
+\c@namec=\count401
+\c@savednamec=\count402
+\c@translator=\count403
+\c@savedtranslator=\count404
+\c@shortauthor=\count405
+\c@savedshortauthor=\count406
+\c@shorteditor=\count407
+\c@savedshorteditor=\count408
+\c@labelname=\count409
+\c@savedlabelname=\count410
+\c@institution=\count411
+\c@savedinstitution=\count412
+\c@lista=\count413
+\c@savedlista=\count414
+\c@listb=\count415
+\c@savedlistb=\count416
+\c@listc=\count417
+\c@savedlistc=\count418
+\c@listd=\count419
+\c@savedlistd=\count420
+\c@liste=\count421
+\c@savedliste=\count422
+\c@listf=\count423
+\c@savedlistf=\count424
+\c@location=\count425
+\c@savedlocation=\count426
+\c@organization=\count427
+\c@savedorganization=\count428
+\c@origlocation=\count429
+\c@savedoriglocation=\count430
+\c@origpublisher=\count431
+\c@savedorigpublisher=\count432
+\c@publisher=\count433
+\c@savedpublisher=\count434
+\c@language=\count435
+\c@savedlanguage=\count436
+\c@origlanguage=\count437
+\c@savedoriglanguage=\count438
+\c@pageref=\count439
+\c@savedpageref=\count440
+\shorthandwidth=\skip81
+\shortjournalwidth=\skip82
+\shortserieswidth=\skip83
+\shorttitlewidth=\skip84
+\shortauthorwidth=\skip85
+\shorteditorwidth=\skip86
+\locallabelnumberwidth=\skip87
+\locallabelalphawidth=\skip88
+\localshorthandwidth=\skip89
+\localshortjournalwidth=\skip90
+\localshortserieswidth=\skip91
+\localshorttitlewidth=\skip92
+\localshortauthorwidth=\skip93
+\localshorteditorwidth=\skip94
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/blx-unico
+de.def")
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/blx-compa
+t.def"
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/biblatex.
+def"
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count441
+\c@textcitetotal=\count442
+\c@textcitemaxnames=\count443
+\c@biburlbigbreakpenalty=\count444
+\c@biburlbreakpenalty=\count445
+\c@biburlnumpenalty=\count446
+\c@biburlucpenalty=\count447
+\c@biburllcpenalty=\count448
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count449
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/bbx/alpha
+betic.bbx"
+File: alphabetic.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/bbx/stand
+ard.bbx"
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count450
+\c@bbx:relatedtotal=\count451
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/cbx/alpha
+betic.cbx"
+File: alphabetic.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/biblatex.
+cfg"
+File: biblatex.cfg 
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2022-02-24 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/blx-case-
+expl3.sty"
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/csquotes/csquotes.
+sty"
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+\csq@reset=\count452
+\csq@gtype=\count453
+\csq@glevel=\count454
+\csq@qlevel=\count455
+\csq@maxlvl=\count456
+\csq@tshold=\count457
+\csq@ltx@everypar=\toks40
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/csquotes/csquotes.
+def"
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/csquotes/csquotes.
+cfg"
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+Package csquotes Info: Redefining alias 'english' -> 'english/american'.
+Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/appendix/appendix.
+sty"
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count458
+\c@@ppsavesec=\count459
+\c@@ppsaveapp=\count460
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/fontenc.sty"
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/lm/t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/inputenc.sty"
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks41
+\inpenc@posthook=\toks42
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+)
+
+Package biblatex Warning: Load 'inputenc' before biblatex.
+
+
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 99.
+
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'polyglossia' package.
+(./exposé.aux (./include/EP-titlepage.aux)
+LaTeX Info: Redefining \rmfamily on input line 8.
+LaTeX Info: Redefining \sffamily on input line 8.
+LaTeX Info: Redefining \ttfamily on input line 8.
+LaTeX Info: Redefining \rmfamily on input line 12.
+LaTeX Info: Redefining \sffamily on input line 12.
+LaTeX Info: Redefining \ttfamily on input line 12.
+)
+\openout1 = exposé.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
+9.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/ts1cmr.fd"
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Info: Redefining \rmfamily on input line 99.
+LaTeX Info: Redefining \sffamily on input line 99.
+LaTeX Info: Redefining \ttfamily on input line 99.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/mkii/supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count461
+\scratchdimen=\dimen289
+\scratchbox=\box114
+\nofMPsegments=\count462
+\nofMParguments=\count463
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count464
+\MPscratchDim=\dimen290
+\MPnumerator=\count465
+\makeMPintoPDFobject=\count466
+\everyMPtoPDFconversion=\toks44
+)
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/epstopdf-pkg/epsto
+pdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/grfext/grfext.sty"
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/generic/kvdefinekeys/kvd
+efinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/00miktex/epstopdf-
+sys.cfg"
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.17} (current compat level: 1.9).
+
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 99.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 99.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 99.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 99.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 99.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 99.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 99.
+LaTeX Font Info:    Redeclaring math accent \check on input line 99.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 99.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 99.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 99.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 99.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 99.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 99.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 99.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 99.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 99.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 99.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 99.
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/lbx/ameri
+can.lbx"
+File: american.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/lbx/engli
+sh.lbx"
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/biblatex/lbx/engli
+sh.lbx"
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+))
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout4 = exposé.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'exposé.bbl' found.
+ (./exposé.bbl)
+Package biblatex Info: Reference section=0 on input line 99.
+Package biblatex Info: Reference segment=0 on input line 99.
+LaTeX Info: Redefining \rmfamily on input line 99.
+LaTeX Info: Redefining \sffamily on input line 99.
+LaTeX Info: Redefining \ttfamily on input line 99.
+
+\openout2 = include/EP-titlepage.aux
+ (./include/EP-titlepage.tex
+<images//uni-logo.png, id=4, 501.875pt x 133.49875pt>
+File: images//uni-logo.png Graphic file (type png)
+<use images//uni-logo.png>
+Package luatex.def Info: images//uni-logo.png  used on input line 9.
+(luatex.def)             Requested size: 199.16928pt x 52.97891pt.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+8.
+
+("C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/tex/latex/lm/t1lmss.fd"
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 48.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 48.
+
+[1
+
+
+
+
+
+{C:/Users/evagr/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}<./images//
+uni-logo.png>]) (./exposé.toc
+LaTeX Info: Redefining \rmfamily on input line 1.
+LaTeX Info: Redefining \sffamily on input line 1.
+LaTeX Info: Redefining \ttfamily on input line 1.
+LaTeX Info: Redefining \rmfamily on input line 2.
+LaTeX Info: Redefining \sffamily on input line 2.
+LaTeX Info: Redefining \ttfamily on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+)
+\tf@toc=\write5
+
+\openout5 = exposé.toc
+ [2
+
+
+
+
+]
+chapter 1.
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface.
+
+[1
+
+
+
+]
+chapter 2.
+[2
+
+
+]
+LaTeX Info: Redefining \rmfamily on input line 134.
+LaTeX Info: Redefining \sffamily on input line 134.
+LaTeX Info: Redefining \ttfamily on input line 134.
+ [3]
+chapter 3.
+[4
+
+
+]
+chapter 4.
+
+Overfull \hbox (11.00462pt too wide) in paragraph at lines 150--151
+[]\T1/lmr/m/n/12 N-gram mod-els for each
+ []
+
+
+LaTeX Font Warning: Font shape `T1/lmss/bx/sc' undefined
+(Font)              using `T1/lmss/bx/n' instead on input line 162.
+
+
+Overfull \hbox (13.82037pt too wide) in paragraph at lines 163--164
+[]\T1/lmr/m/n/12 Use \T1/lmr/m/sc/12 Lit-ter-Box \T1/lmr/m/n/12 to find
+ []
+
+
+Overfull \hbox (11.50856pt too wide) in paragraph at lines 165--166
+[]\T1/lmr/m/n/12 An-a-lyze if \T1/lmr/m/sc/12 n-gram lan-guage model \T1/lmr/m/
+n/12 found
+ []
+
+[5
+
+
+]
+chapter 5.
+
+Overfull \hbox (3.92026pt too wide) in paragraph at lines 175--175
+[]|\T1/lmr/m/n/12 Weeks| 
+ []
+
+
+Overfull \hbox (26.66035pt too wide) in paragraph at lines 174--185
+[][] 
+ []
+
+<./images/scratch.jpg, id=40, 1204.5pt x 782.925pt>
+File: ./images/scratch.jpg Graphic file (type jpg)
+<use ./images/scratch.jpg>
+Package luatex.def Info: ./images/scratch.jpg  used on input line 189.
+(luatex.def)             Requested size: 227.62204pt x 147.94493pt.
+[6
+
+
+<./images/scratch.jpg>]
+chapter without number
+
+Overfull \hbox (7.70398pt too wide) in paragraph at lines 198--198
+[]\T1/lmr/m/n/12 Christoph Frä-drich et al.   Com-mon Bugs in Scratch Pro-gram
+s. In: \T1/lmr/m/it/12 ITiCSE20:
+ []
+
+[7
+
+
+
+
+
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+]
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/script}  =>  {latin}
+>  {english/lcscript}  =>  {latin}
+>  {english/scripttag}  =>  {}
+>  {english/language}  =>  {English}
+>  {english/langtag}  =>  {ENG}
+>  {english/bcp47}  =>  {en-US}
+>  {english/hyphennames}  =>  {english,american,usenglish,USenglish}
+>  {english/direction}  =>  {LR}
+>  {english/hyphenmins}  =>  {2,3}
+>  {english/frenchspacing}  =>  {false}
+>  {english/indentfirst}  =>  {false}
+>  {english/fontsetup}  =>  {true}
+>  {english/envname}  =>  {english}
+>  {english/babelname}  =>  {american}
+>  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+LaTeX Info: Redefining \rmfamily on input line 199.
+LaTeX Info: Redefining \sffamily on input line 199.
+LaTeX Info: Redefining \ttfamily on input line 199.
+ [8
+Missing character: There is no ’ (U+2019) in font ec-lmr12!
+] (./exposé.aux (./include/EP-titlepage.aux)
+LaTeX Info: Redefining \rmfamily on input line 8.
+LaTeX Info: Redefining \sffamily on input line 8.
+LaTeX Info: Redefining \ttfamily on input line 8.
+LaTeX Info: Redefining \rmfamily on input line 12.
+LaTeX Info: Redefining \sffamily on input line 12.
+LaTeX Info: Redefining \ttfamily on input line 12.
+)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package logreq Info: Writing requests to 'exposé.run.xml'.
+
+\openout1 = exposé.run.xml
+)
+
+Here is how much of LuaTeX's memory you used:
+ 42295 strings out of 477792
+ 100000,2373549 words of node,token memory allocated
+ 567 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 6 attribute, 72 glue_spec,
+ 6 attribute_list, 2 write nodes
+   avail lists: 2:877,3:275,4:112,5:353,6:152,7:5386,8:30,9:710,10:7,11:420
+ 61601 multiletter control sequences out of 65536+600000
+ 59 fonts using 4252479 bytes
+ 108i,19n,101p,10601b,2005s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<
+C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb><C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/evagr/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/evagr/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/evagr/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/evagr/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/evagr/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/evagr/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/evagr/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/evagr/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Users/evagr/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on exposé.pdf (10 pages, 344757 bytes).
+
+PDF statistics: 88 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+

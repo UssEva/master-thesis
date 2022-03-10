@@ -1,0 +1,35 @@
+% !TeX spellcheck = en_GB
+% !TeX encoding = UTF-8
+% !TeX root = ../thesis.tex
+\chapter{Conclusion}\label{chap:conclusion}
+
+Writing code can be a frustrating experience when the tools given are not enough to ensure that the created program fulfils all the important requirements to run smoothly and without mistakes. Even more so when the programmers are pupils who are in the beginner state of understanding what coding really means. \scratch\ already is a good starting platform to learn the basics but the editor lacks essential debugging tools.
+
+To improve the accuracy of \scratch\ projects and lessen the frustration that comes with bug detection, this bachelor's thesis proposed a method of bug detection that is based on \ngram{s}. The \tokenizer\ uses the \AST\ of \litterbox\ as a foundation for tokenizing each \scratch\ project. By calculating a probability distribution of all n-grams in a given data set, the \ngramtrainer\ is then able to estimate the probability of the occurrence of a specific \hyperref[def:token]{\textit{token}} sequence that is used in \scratch\ projects. Assuming that a low probability hints at a programming mistake or an unusual use case, the \ngrambugfinder\ can analyse projects based on the \ngram\ that was calculated by the \ngramtrainer\ and report these sequences as potential bugs.
+
+We created a \ngram\ out of a big data set that consists of 75,277 as well as small sets of pupil's solutions for common tasks. At first we used project-specific \ngram{s} and utilized them to compare the reported bugs with other bug detection approaches. The analysis showed that an \ngram\ has a different range of detected violations than for instance \litterbox\ or \whisker\ tests do. Further inspection showed that most unusual use cases of \scratch\ code that were found be the \ngram\ were extensions of the original task. Other found bugs include dead code and empty scripts or bodies, whereas long scripts or unused variable are code smells that are only reported by \litterbox{}. 
+
+As another test of the \ngram\ approach we analysed a set of projects with different kinds of tasks and solutions. We wanted to know if the model can detect mistakes in absence of a reference solution. The reports show that the method is working with a low percentage of false positives. Most bugs are found except for unusual use cases which is due to a missing reference.
+
+Lastly, the attempt at utilizing the big data set in comparison to project-specific models was not as successful because of an appearance of negative probabilities. But aside from a possible miscalculation the numbers already hint at a not as effective use of the general model. Because of missing reference solutions it is also impossible to categorize unusual use cases. To approve this hypothesis that project-specific models are more accurate than general models, further research with the big data set is needed.
+
+Because this is the first time utilizing \ngram{s} for bug detection in \scratch{}, there are different aspects of the evaluation that can be used or improved for further research. 
+
+\paragraph{Visualisation.}
+Currently detected bugs are only printed into a \texttt{.csv} report file which is not very efficient for frequent usage. A better solution would be to visualize the reported \hyperref[def:token]{\textit{token}} sequences and, instead of just writing the \texttt{Map} of low probability sequences into a file, to convert the result back into common \scratch\ blocks. This way the output is easier to compare to the originally analysed code and manual examination of the \scratch\ projects can be executed faster. 
+
+\paragraph{Token Granularity.}
+Because the basis of the tokenization process is the \AST\ of \litterbox\ that was modified to only contain the tokens that are important for bug detection and exclude all information-based \AST\ nodes, the granularity of the tokens is set to a specific level. But it would be interesting to explore different granularity levels and their effect on the \ngram\ and therefore the bug detection results. Should \scratch\ blocks like literals, drop-down lists or extensions like \textit{pens} be part of the \hyperref[def:token]{\textit{token}} \AST\ or are those not effecting the end results? 
+
+\paragraph{Sizes of Data Sets.}
+In this bachelor's thesis the \ngram{s} were created by large as well as smaller data sets but the optimal size to create the best model was not part of the research questions. We already discovered that smaller and project-specific models are more precise and accurate in their results than larger ones. But the best number of project solutions that should be used for the model is unknown. 
+
+\paragraph{Parameter Boundaries.}
+Another interesting part of \ngram{s} are the many different parameters that can be configured. Is it useful to set the \hyperref[def:gram_size]{\textit{gram size}} or \hyperref[def:sequence_length]{\textit{sequence length}} to big numbers over 10? What would happen if we set the \hyperref[def:minimum_token_occurrence]{\textit{minimum token occurrence}} higher? How big should the \hyperref[def:reporting_size]{\textit{reporting size}} be to keep the false positive rate at the minimum? All these questions can be used for future research and are good starting points for further analysis of the \ngram{} bug detection approach in \scratch{}.
+
+
+
+
+
+
+ 

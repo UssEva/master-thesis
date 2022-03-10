@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'exposé.blg'
+[421] biber-MSWIN64:340> INFO - === 
+[493] Biber.pm:418> INFO - Reading 'exposé.bcf'
+[669] Biber.pm:972> INFO - Found 14 citekeys in bib section 0
+[689] Biber.pm:4383> INFO - Processing section 0
+[705] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[803] bibtex.pm:1713> INFO - LaTeX decoding ...
+[841] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[1043] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1044] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1045] Biber.pm:4203> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1045] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1065] bbl.pm:654> INFO - Writing 'exposé.bbl' with encoding 'UTF-8'
+[1080] bbl.pm:757> INFO - Output to exposé.bbl

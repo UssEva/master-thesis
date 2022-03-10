@@ -1,0 +1,180 @@
+% !TeX spellcheck = en_GB
+% !TeX encoding = UTF-8
+
+% COMPILE WITH:
+% `latexmk`
+% You need lualatex and biber (in all TeXLive distributions)
+\documentclass[
+numbers=noenddot,
+%listof=totoc,
+parskip=half-,
+fontsize=12pt,
+paper=a4,
+oneside,
+titlepage,
+bibliography=totoc,
+chapterprefix=false,
+table
+%    draft
+]{scrbook}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{algorithmicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{pdflscape}
+
+
+%pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9} 
+\usepgfplotslibrary{external}
+\tikzexternalize 
+
+% use lualatex or xelatex
+%\usepackage{fontspec}
+\usepackage{wrapfig}
+\usepackage[onehalfspacing]{setspace}
+
+% better language support
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+%\setdefaultlanguage{german}
+
+\usepackage{tocbasic}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{paralist}
+\usepackage[]{scrlayer-scrpage}
+
+% better bibliography (biblatex style)
+% use biber to compile
+\usepackage[citestyle=alphabetic, bibstyle=alphabetic, sorting=nyt, backend=biber, language=english, backref=true, maxcitenames=2]{biblatex}
+
+% better quotes
+% use \enquote{text}
+\usepackage[autostyle,english=american,german=quotes]{csquotes}
+\addbibresource{bibliography.bib}
+
+% appendix
+\usepackage[titletoc]{appendix}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{subfig}
+%\usepackage[table]{xcolor}
+
+% where to put all images and figures
+\graphicspath{{images/}}
+
+% Title
+\title{Scratch Bug Detection Using the N-gram Language Model}
+
+% Author
+\author{Eva Gründinger}
+
+% Date
+\date{\today}
+
+% CHOOSE ACCORDINGLY
+\newcommand{\thesisType}{bachelor's thesis}
+%\newcommand{\thesisType}{Masterarbeit}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{scrheadings}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+% CHOOSE ACCORDINGLY
+\include{include/BA-titlepage}
+%\include{includes/MA-titlepage}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Contents}
+\tableofcontents
+\newpage
+
+
+
+
+% -- ABSTRACT
+\input{mycommands.tex}
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\include{include/abstract}
+\newpage
+
+% -- Acknowledgements (optional)
+%\include{includes/acknowledgements}
+\newpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+% -- List of figures
+\thispagestyle{empty}
+\cleardoublepage
+\listoffigures
+\newpage
+
+%% -- List of algorithms
+%\thispagestyle{empty}
+%\cleardoublepage
+%%\listofalgorithms
+%\newpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+% -- List of tables
+\thispagestyle{empty}
+\cleardoublepage
+\listoftables
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+% -- Chapters
+% following IMRaD structure
+% adjust for your liking
+\include{chapters/1_introduction}
+\include{chapters/2_background}
+\include{chapters/3_methods}
+\include{chapters/4_results}
+\include{chapters/5_related-work}
+\include{chapters/6_conclusion}
+
+% -- Appendix (optional)
+%\begin{appendices}
+%    \input{appendix.tex}
+%\end{appendices}
+%\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+% -- Bibliography
+\printbibliography
+
+% -- Eidesstattliche Erklärung (= Affadavit)
+\include{include/affidavit}
+
+
+\end{document}
