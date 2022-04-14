@@ -1,4 +1,4 @@
-% !TeX spellcheck = en_US
+% !TeX spellcheck = en_GB
 % !TeX encoding = UTF-8
 
 % COMPILE WITH:
@@ -72,7 +72,7 @@
 
 % Title
 % working title
-\title{The role of IoT in the fight against Covid-19: Opportunities and Security risks}
+\title{A Systematic Categorization of \\ IoT Security Patterns}
 
 % Author
 \author{Eva Gründinger}
@@ -102,46 +102,140 @@
 
     \mainmatter
 
-    \chapter{Problem}\label{ch:problem}    
+    \chapter{Problem}\label{ch:problem}
+    
+    Designing a computer system is a complex project that gets easier by utilizing the right tools. Specific patterns and architectures allow a developer to simplify problems in an abstract way and analyse the given structure of a system. By not only applying different patterns for design but also security or even privacy the developed system ensures a secure and privacy-aware operation by design. But the development and usage of said security and privacy patterns is hindered by the needed expert knowledge in these areas. For this reason extensive documentation and testing in practice is needed to ensure usable patterns that can be easily applied by any developer to a given system. \\
+    While design patterns for development and implementation are common for most computer systems these days, domain-specific patterns like for Internet of Things are rare to find. Because of different requirements that an IoT system has compared to a general computer system, existing design patterns are often not suitable for this specific use case. When IoT-specific patterns are already hard to find, it is only reasonable to assume that IoT patterns that are security or privacy specific are even rarer. Even though they exist, a structured and organized catalogue of all kinds of IoT security patterns is basically non-existent at this point in time. \\
+    Therefore, this master's thesis proposes a systematic collection and categorization of IoT security (and privacy) patterns and analyses the gaps of the recent research work regarding IoT security. As a catalogue that combines all IoT security patterns in one place and is organized in a top to bottom approach that follows the IoT World Forum Reference Model of the IoT architecture, this collection will play an important part in future development of secure IoT solutions. 
+        
+
 
     \chapter{State of the art}\label{ch:state-of-the-art}
+    
+    \section{IoT Patterns and Architectures}
+    Patterns are a common way to describe abstract solutions to design problems and can be used to analyse and understand computer systems in an easier way. Reinfurt et al.~\cite{Reinfurt2017} describe in their paper IoT-specific patterns that help to design Internet of Things systems and can be applied to the domain of Smart Factory Systems.
+    
+    Other than design patterns, different architecture styles can be utilized when creating IoT systems. Muccini et al.~\cite{Muccini2018} provide a number of abstract IoT reference architectures in their paper. Their study helps to classify existing and future approaches for IoT styles at the architectural level.
+    
+    In order to get a better idea of the landscape of patterns and architectures that have accumulated over the years in research, Washizaki et al.~\cite{Washizaki2019, Washizaki2020} analysed the successes and failures of the used patterns for IoT systems. But because of limited documentation there is a lot of room for improvement in the development of IoT-specific patterns and architectures.
+    
+    \section{IoT Security Patterns and Architectures}
+    Fysarakis et al.~\cite{Fysarakis2019} sketch the SEMIoTICS approach in their paper. Aiming to develop a pattern-driven framework, the SEMIoTICS project wants to guarantee semi-autonomic behaviour in IoT/Industrial IoT applications.
+    
+    Organized in an hierarchical taxonomy, Papoutsakis et al.~\cite{Papoutsakis2021} collect and categorize a set of security and privacy patterns. This usable pattern collection should guide developers to design IoT solutions that are secure and privacy-aware by design.
+    
+    Over the last 3 years, Rajmohan et al.~\cite{Rajmohan2020, iotbds20, Rajmohan2022} published different papers that review the research work regarding IoT patterns and architectures for IoT security and privacy. Although there is a rise in the number of publications, there is not yet an approach of applying architectures and patterns together that address security not only on the architectural but also on the network or IoT-devices level.
+
+
 
     \chapter{Research questions}\label{ch:research-questions}
     The thesis aims to answer the following research questions:
-
-    \begin{description}
-        \item[RQ 1]
-        \item[RQ 2] 
-        \item[RQ 3] 
-    \end{description}
+    
+	\begin{enumerate}
+	\item[R1] Which layer in the IoT World Forum Reference Model of the IoT architecture is covered by the least security patterns?
+	\item[R2] Which security goal is addressed by security patterns the least?
+	\item[R3] How many of the OWASP Top Ten most common vulnerabilities within IoT are solved by utilizing these security patterns?
+	\end{enumerate}
 
 
     \chapter{Evaluation}\label{ch:evaluation}
     
-    \begin{description}
-        \item[RQ 1] 
-        \item[RQ 2]
-       	\item[RQ 3] 
-    \end{description}
- 
- 
- 	\chapter{Schedule}\label{ch:schedule}
- 	
- 	\begin{table}[ht]
- 		\label{tab:schedule}
- 		\caption{Schedule for master thesis}
- 		\begin{tabular}{p{1cm}p{3cm}p{3cm}p{8cm}}
- 			Weeks & Time slot & Phase & Tasks \\
- 			\hline
- 			2 & 17.03. - 31.03. & Preparation & Setup \latex{} outline, Search papers, Write Exposé \\
- 			2 & 01.04. - 15.04. & Familiarization & Prepare papers, Structure thesis, Write time table \\
- 			8 & 16.04. - 10.06. & Evaluation & Analyze findings \\
- 			11 & 11.06. - 27.08. & Writing & Structure, Research Questions, Main body, Introduction, Conclusion \\
- 			2 & 28.08. - 11.09. & Submission & Corrections, Print and bind master thesis \\
- 			\hline
- 		\end{tabular}
- 	\end{table}
+     Before any of the research questions can be answered, we have to search for security patterns that are specific for IoT that already exist in literature and specify them in a systematic way: \emph{pattern name, intent, problem \& solution, applicability, UML representation, implementation, known uses}. \\
+     Then we categorize each pattern according to the IoT World Forum Reference Model (WFRM) of the IoT architecture by assigning it to its corresponding layer and list them in a top to bottom approach.
+    
+    \begin{enumerate}
+    	\item[R1] Compare the number of security patterns of each layer in the IoT WFRM.
+    	\item[R2] List the important security goals for an IoT system and check for each pattern which goals it protects. Compare the coverage of the different security goals.
+    	\item[R3] List the OWASP Top Ten most common security (and
+    	privacy) vulnerabilities within IoT and check if each
+    	vulnerability is solved by at least one pattern.
+    \end{enumerate}
 
+	
+	\chapter{Outline}\label{ch:outline}
+	
+	\begin{enumerate}
+		\item Introduction
+			\begin{enumerate}
+				\item The role of IoT in daily life
+				\item Security Risks of IoT
+			\end{enumerate}
+		
+		\item Background
+			\begin{enumerate}
+				\item What is Internet of Things?
+				 	\begin{enumerate}
+				 		\item Definition of IoT
+				 		\item Application Areas
+				 	\end{enumerate}
+				\item Security Goals
+					\begin{enumerate}
+						\item Confidentiality
+						\item Integrity
+						\item Availability
+						\item Authentication
+						\item Authorization
+						\item Accountability
+						\item Privacy
+					\end{enumerate}
+				\item Open Web Application Security Project (OWASP)
+					\begin{enumerate}
+						\item Top Ten Common IoT Vulnerabilities
+						\item Top Ten Privacy Risks
+					\end{enumerate}
+				\item Design Methods
+					\begin{enumerate}
+						\item Design Pattern
+						\item Security Pattern
+						\item Privacy Pattern
+						\item Security Architecture
+						\item Framework
+					\end{enumerate}
+			\end{enumerate}
+		
+		\item Methodology
+			\begin{enumerate}
+				\item Research Questions
+				\item Systematic Literature Review Approach
+					\begin{enumerate}
+						\item Inclusion and Exclusion Criteria
+						\item Search and Selection Strategy
+					\end{enumerate}
+				\item Taxonomy of the Research Area
+					\begin{enumerate}
+						\item Pattern Categorization
+						\item IoT World Forum Reference Model of the IoT architecture
+						\item Security Concerns
+					\end{enumerate}
+			\end{enumerate}
+				
+		\item Evaluation
+			\begin{enumerate}
+				\item Data Set of IoT Security Patterns
+				\item RQ1: IoT World Forum Reference Model Categorization
+				\item RQ2: Protected Security Goals
+				\item RQ3: Solutions for Common Vulnerabilities
+				\item Threats to Validity
+			\end{enumerate}	
+		
+		\item Related Work
+		
+		\item Conclusion
+		
+	\end{enumerate}
+
+
+
+	\chapter{Future Work}
+	\label{ch:future_work}
+	
+	\begin{enumerate}
+		\item Application of IoT security patterns to use cases to test their usability in practice.
+		\item Cooperation of industry with academia to develop new IoT security patterns.
+		\item Expanding the IoT pattern catalogue with more security and privacy patterns as well as other design patterns.
+		\item Designing IoT security architectures that take advantage of these IoT security patterns. 
+	\end{enumerate}
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \backmatter
