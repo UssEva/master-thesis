@@ -1,1 +1,1 @@
-# Master Thesis by Eva Gründinger
+# Master's Thesis by Eva Gründinger
