@@ -1,0 +1,46 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+% !TeX root = ../thesis.tex
+
+\chapter{Discussion}\label{ch:discussion}
+In this last chapter we point out the threats to validity of our research work (see Section~\ref{sec:threats}) as well as suggest areas in the IoT security field that need more investigation in the future in Section~\ref{sec:future_work}. Lastly a final conclusion to close off this master's thesis is given in Section~\ref{sec:conclusion}.
+
+\section{Threats to Validity}\label{sec:threats}
+Like for any type of research work, there exist specific limitations that must be considered when looking at the context of a dissertation. Internal as well as external factors that cannot be influenced by the researcher can lessen the validity of the analysis and its conclusions. These threats also exist in this master's thesis and can be listed as the following points:
+
+\paragraph{Lacking Data Set.} The process of automated and manual searching, collecting and scanning publications that fit into the theme of this master's thesis can be quite challenging. We have to decide which patterns have a focus on IoT security and are truly pieces of a solution to a larger problem and not entire architectures by themselves. Therefore the creation of a complete and structured pattern catalogue from scratch is an impossible task and prone to errors and missing patterns.
+
+\paragraph{Indefinite Categorizations.} Defining different patterns and putting them into specific categories can be a difficult task. When assigning these patterns to the different layers of the IoT WFRM, we did it with the best of our ability. But these categories can be interpreted in different ways and a pattern can be attributed to more than one layer. So there are many possibilities on where to draw the lines. 
+
+\paragraph{Outdated OWASP Top Ten.} To have an up-to-date discussion on the topic of IoT security patterns, we tried to take the newest research into account in our analysis. But this is not always possible. In the case of the referenced OWASP top ten list on the common IoT vulnerabilities, the ranking was last updated in 2018. So the possibility that the rankings have changed in the last couple of years is huge because of how fast technology evolves these days. This has to be taken into consideration, when we analyse how these vulnerabilities can be solved with our pattern catalogue and which risks still exist in IoT systems today.
+
+
+\section{Future Work}\label{sec:future_work}
+A collection of security patterns in the IoT field is a good start to get an overview of the current state of the art. But there are many more ways in which researchers and developers can advance the secure IoT development and utilize the advantages of standardization.  
+
+\paragraph{\textbf{Pattern Catalogue Expansion.}} The IoT security pattern catalogue in Chapter~\ref{ch:catalogue} cannot be called complete in any way. There are surely more security patterns that can be modified into the IoT context as well as other types of patterns that can make the implementation of secure IoT systems easier. A few examples would be privacy patterns, misuse patterns or anti-patterns. Therefore, the expansion of the security pattern catalogue for IoT is definitely a topic for further research.   
+
+\paragraph{\textbf{Industry Cooperation.}} Technology and science are ever-evolving, therefore the need for different types of patterns for common problems will always exist and require new and modern solutions. The best way to develop new security patterns, that are optimized for applicability and usage in real-world situations, is a cooperation with the industry. Only when academia combines its theories and ideas with the practical problems of the corresponding industry, we will find the best solutions to solve common issues in the world of IoT. 
+
+\paragraph{\textbf{IoT Security Architectures.}} The last point would be the usage of existing security patterns to model architectures that are able to protect IoT systems from cyberattacks. By combining specific security patterns we will be able to create improved IoT systems in the future. 
+
+
+\section{Conclusion}\label{sec:conclusion}
+The aim of this analysis was to identify the shortcomings of the state-of-the-art research in the field of IoT security and to provide a guide for future development of secure IoT systems. 
+
+In the beginning we defined, which IoT devices belong into the IoT spectrum and in which areas of life these are found. Regardless if you look into the healthcare, banking or industry sector, IoT applications exist everywhere they can be useful. Even a small home can benefit from the safety features of IoT gadgets like motion detectors, security cameras or smart locks.
+
+After gaining a better understanding of the topic, we further inspected various threats in the IoT field that can be caused by cyberattacks and harm the safety of its users. Attackers can infiltrate a system by using techniques like man-in-the-middle, denial of service or even ransomware. In addition, we looked at a list of IoT vulnerabilities, such as unsecure passwords or system components, and how to overcome these threats by utilizing secure-by-design architecture.  
+
+After introducing the IoT WFRM and an overview of the most important security objectives, our goal was to create a comprehensive catalogue of IoT security patterns. Although one can never say such a collection is complete, the catalogue includes all findings we could make under the given search criteria. Furthermore, these patterns allowed us to gain knowledge about the following questions:
+
+\begin{itemize}
+	\item Which layer in the IoT WFRM is covered by the least security patterns?
+	\item Which security goal is addressed by security patterns the least and how can the coverage be improved?
+	\item How many of the OWASP top ten most common IoT vulnerabilities are solved by utilizing these security patterns?
+\end{itemize}
+
+With a catalogue that consists of 61 patterns, it was surprising that almost half of these belonged to only two layers. Also, the lack of security goals that were covered in the Data Accumulation layer is alarming. On the other hand every vulnerability, that was published by OWASP, was addressed by at least one pattern, which is a positive discovery. 
+
+To sum up, with these findings we built a foundation for future endeavours to broaden the spectrum of IoT security patterns. Thus, this pattern catalogue can be used as a starting point for secure system design or further academic research, that will expand the current number of entries in our pattern collection. With appropriate industry cooperation the development of applicable patterns, that improve the security of IoT systems and at the same time protect its users, can be achieved.
+

@@ -1,3 +1,385 @@
-%! Author = eva
-%! Date = 10.03.2022
+%!TEX root = thesis.tex
+
+% 2 Background
+@inproceedings{Fernandez2009,
+	author = {Fern{\'a}ndez, Eduardo B. and Yoshioka, Nobukazu and Washizaki, Hironori},
+	title = {Modeling misuse patterns},
+	year = {2009},
+	month = {oct},
+	day = {12},
+	language = {English},
+	pages = {566--571},
+	booktitle = {Proceedings - International Conference on Availability, Reliability and Security, ARES 2009}
+}
+
+% 3 Related Work
+@inproceedings{Reinfurt2017,
+	author = {Reinfurt, Lukas and Falkenthal, Michael and 
+	Breitenb{\"{u}}cher, Uwe and Leymann, Frank},
+	booktitle = {Proceedings of the 11\textsuperscript{th} Advanced Summer School on Service Oriented Computing},
+	pages = {1--10},
+	publisher = {IBM Research Division},
+	title = {Applying IoT Patterns to Smart Factory Systems},
+	year = {2017}
+}
+
+@InProceedings{Muccini2018,
+	author = {Muccini, Henry and Moghaddam, Mahyar Tourchi},
+	editor = {Cuesta, Carlos E.	and Garlan, David and P{\'e}rez, Jennifer},
+	title = {IoT Architectural Styles},
+	booktitle = {Software Architecture},
+	year = {2018},
+	publisher = {Springer International Publishing},
+	address = {Cham},
+	pages = {68--85},
+}
+
+@INPROCEEDINGS{Washizaki2019,  
+	author = {Washizaki, Hironori and Yoshioka, Nobukazu and Hazeyama, Atsuo and Kato, Takehisa and Kaiya, Haruhiko and Ogata, Shinpei and Okubo, Takao and Fernandez, Eduardo B.},  
+	booktitle = {2019 IEEE/ACM 1st International Workshop on Software Engineering Research Practices for the Internet of Things (SERP4IoT)},   
+	title = {Landscape of IoT Patterns},   
+	year = {2019},   
+	pages = {57-60},  
+}
+
+@ARTICLE{Washizaki2020,  
+	author = {Washizaki, Hironori and Ogata, Shinpei and Hazeyama, Atsuo and Okubo, Takao and Fernandez, Eduardo B. and Yoshioka, Nobukazu},  
+	journal = {IEEE Internet of Things Journal},   
+	title = {Landscape of Architecture and Design Patterns for IoT Systems},   
+	year = {2020}, 
+	volume = {7},  
+	number = {10},  
+	pages = {10091-10101},  
+}
+
+@INPROCEEDINGS{Fysarakis2019,  
+	author = {Fysarakis, Konstantinos and Spanoudakis, George and Petroulakis, Nikolaos and Soultatos, Othonas and Bröring, Arne and Marktscheffel, Tobias},  
+	booktitle = {2019 Global IoT Summit (GIoTS)},  
+	title = {Architectural Patterns for Secure IoT Orchestrations},  
+	year = {2019},  
+	pages = {1-6},  
+}
+
+@Article{Papoutsakis2021,
+	author = {Papoutsakis, Manos and Fysarakis, Konstantinos and Spanoudakis, George and Ioannidis, Sotiris and Koloutsou, Konstantina},
+	title = {Towards a Collection of Security and Privacy Patterns},
+	journal = {Applied Sciences},
+	volume = {11},
+	year = {2021},
+	number = {4},
+	article-number = {1396},
+	url = {https://www.mdpi.com/2076-3417/11/4/1396},
+}
+
+@INPROCEEDINGS{Rajmohan2020,  
+	author = {Rajmohan, Tanusan and Nguyen, Phu H. and Ferry, Nicolas}, 
+	booktitle = {2020 46th Euromicro Conference on Software Engineering and Advanced Applications (SEAA)},  
+	title = {Research Landscape of Patterns and Architectures for IoT Security: A Systematic Review},   
+	year = {2020},   
+	pages = {463-470},  
+}
+
+@conference{iotbds20,
+	author = {Tanusan Rajmohan. and Phu Nguyen. and Nicolas Ferry.},
+	title = {A Systematic Mapping of Patterns and Architectures for IoT Security},
+	booktitle = {Proceedings of the 5th International Conference on Internet of Things, Big Data and Security - IoTBDS,},
+	year = {2020},
+	pages = {138-149},
+	publisher = {SciTePress},
+	organization = {INSTICC},
+}
+
+@article{Rajmohan2022,
+	title = {A decade of research on patterns and architectures for IoT security},
+	author = {Tanusan Rajmohan and Phu Hong Nguyen and Nicolas Ferry},
+	journal = {Cybersecurity},
+	year = {2022},
+	volume = {5},
+	pages = {1-29}
+}
+
+
+% 4 Methodology
+@techreport{Kitchenham2007,
+	author = {Kitchenham, Barbara Ann and Charters, Stuart},
+	institution = {Keele University and Durham University Joint Report},
+	month = {07},
+	number = {EBSE 2007-001},
+	title = {Guidelines for performing Systematic Literature Reviews in Software Engineering},
+	url = {https://www.elsevier.com/__data/promis_misc/525444systematicreviewsguide.pdf},
+	year = {2007}
+}
+
+@article{Wohlin2013,
+	title = {Systematic literature reviews in software engineering},
+	journal = {Information and Software Technology},
+	volume = {55},
+	number = {6},
+	pages = {919-920},
+	year = {2013},
+	url = {https://www.sciencedirect.com/science/article/pii/S0950584913000359},
+	author = {Claes Wohlin and Rafael Prikladnicki}
+}
+
+@inproceedings{Bunke2014,
+	author = {Bunke, Michaela},
+	title = {On the Description of Software Security Patterns},
+	year = {2014},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	booktitle = {Proceedings of the 19th European Conference on Pattern Languages of Programs},
+	articleno = {34},
+	numpages = {10},
+	location = {Irsee, Germany},
+	series = {EuroPLoP '14}
+}
+
+@book{Buschmann1996,
+	author = {Buschmann, Frank and Meunier, Regine and Rohnert, Hans and Sommerlad, Peter and Stal, Michael},
+	title = {Pattern-Oriented Software Architecture - Volume 1: A System of Patterns},
+	year = {1996},
+	publisher = {Wiley Publishing}
+}
+
+@book{Gamma1994,
+	title = {Design Patterns: Elements of Reusable Object-Oriented Software},
+	author = {Gamma, E. and Helm, R. and Johnson, R. and Vlissides, J.},
+	series = {Addison-Wesley Professional Computing Series},
+	url = {https://books.google.de/books?id=6oHuKQe3TjQC},
+	year = {1994},
+	publisher = {Pearson Education}
+}
+
+% 5 IoT Security Pattern Catalogue
+% 6 Evaluation and Discussion
+
+@inproceedings{Fernandez2021,
+	author = {B. Fernández, Eduardo and Astudillo, Hernan and Orellana, Cristian},
+	title = {A Pattern for a Secure IoT Thing},
+	year = {2021},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3489449.3489988},
+	booktitle = {26th European Conference on Pattern Languages of Programs},
+	articleno = {16},
+	numpages = {6},
+	location = {Graz, Austria},
+	series = {EuroPLoP'21}
+}
+
+@article{Fernandez20201,
+	author = {Fernández, Eduardo and Fernandez, E and Yoshioka, Nobukazu and Washizaki, Hironori},
+	year = {2020},
+	month = {01},
+	title = {Abstract and IoT security segmentation patterns}
+}
+
+@inproceedings{Fernandez20202,
+	author = {Fernández, Eduardo and Yoshioka, Nobukazu and Washizaki, Hironori},
+	year = {2020},
+	month = {02},
+	title = {Secure Distributed Publish/Subscribe (P/S) pattern for IoT}
+}
+
+@inproceedings{Fernandez20203,
+	author = {Fernández, Eduardo B.},
+	title = {A Pattern for a Secure Cloud-Based IoT Architecture},
+	year = {2020},
+	publisher = {The Hillside Group},
+	address = {USA},
+	booktitle = {Proceedings of the 27th Conference on Pattern Languages of Programs},
+	articleno = {10},
+	numpages = {9},
+	location = {Virtual Event},
+	series = {PLoP '20}
+}
+
+@inproceedings{Munoz2020,
+	author = {Mu\~{n}oz, Antonio and Fernandez, Eduardo B.},
+	title = {TPM, a Pattern for an Architecture for Trusted Computing},
+	year = {2020},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3424771.3424781},
+	booktitle = {Proceedings of the European Conference on Pattern Languages of Programs 2020},
+	articleno = {14},
+	numpages = {8},
+	location = {Virtual Event, Germany},
+	series = {EuroPLoP '20}
+}
+
+@inproceedings{Orellana2020,
+	author = {Orellana, Cristian and Fernandez, Eduardo B. and Astudillo, Hern\'{a}n},
+	title = {A Pattern for a Secure Sensor Node},
+	year = {2020},
+	publisher = {The Hillside Group},
+	address = {USA},
+	booktitle = {Proceedings of the 27th Conference on Pattern Languages of Programs},
+	articleno = {12},
+	numpages = {10},
+	location = {Virtual Event},
+	series = {PLoP '20}
+}
+
+@inproceedings{Moreno2019,
+	author = {Moreno, Julio and Fernandez, Eduardo B. and Fernandez-Medina, Eduardo and Serrano, Manuel A.},
+	title = {BlockBD: A Security Pattern to Incorporate Blockchain in Big Data Ecosystems},
+	year = {2019},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3361149.3361166},
+	booktitle = {Proceedings of the 24th European Conference on Pattern Languages of Programs},
+	articleno = {17},
+	numpages = {8},
+	location = {Irsee, Germany},
+	series = {EuroPLop '19}
+}
+
+@INPROCEEDINGS{Soultatos2019,  
+	author = {Soultatos, Othonas and Papoutsakis, Manos and Fysarakis, Konstantinos and Hatzivasilis, George and Michalodimitrakis, Manos and Spanoudakis, George and Ioannidis, Sotiris},  
+	booktitle = {2019 IEEE 24th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks (CAMAD)},   
+	title = {Pattern-Driven Security, Privacy, Dependability and Interoperability Management of IoT Environments},   
+	year = {2019},  
+	pages = {1-6}
+}
+
+@INPROCEEDINGS{Ali2018,
+	author = {Ali, Ishfaq and Asif, Muhammad},
+	booktitle = {2018 International Conference on Engineering and Emerging Technologies (ICEET)}, 
+	title = {Applying security patterns for authorization of users in IoT based applications},
+	year = {2018},
+	pages = {1-5},
+	month = {Feb}
+}
+
+@inproceedings{Schuss2018,
+	author = {Schu\ss{}, Markus and Iber, Johannes and Dobaj, J\"{u}rgen and Kreiner, Christian and Boano, Carlo Alberto and R\"{o}mer, Kay},
+	title = {IoT Device Security the Hard(Ware) Way},
+	year = {2018},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3282308.3282329},
+	booktitle = {Proceedings of the 23rd European Conference on Pattern Languages of Programs},
+	articleno = {20},
+	numpages = {4},
+	location = {Irsee, Germany},
+	series = {EuroPLoP '18}
+}
+
+@inproceedings{Seitz2018,
+	author = {Seitz, Andreas and Thiele, Felix and Bruegge, Bernd},
+	title = {Fogxy: An Architectural Pattern for Fog Computing},
+	year = {2018},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3282308.3282342},
+	booktitle = {Proceedings of the 23rd European Conference on Pattern Languages of Programs},
+	articleno = {33},
+	numpages = {8},
+	location = {Irsee, Germany},
+	series = {EuroPLoP '18}
+}
+
+@INPROCEEDINGS{Tkaczyk2018,
+	author = {Tkaczyk, Rafal and Wasielewska, Katarzyna and Ganzha, Maria and Paprzycki, Marcin and Pawlowski, Wieslaw and Szmeja, Pawel and Fortino, Giancarlo},  
+	booktitle = {2018 IEEE International Conference on Communications Workshops (ICC Workshops)},  
+	title = {Cataloging Design Patterns for Internet of Things Artifact Integration},   
+	year = {2018}, 
+	pages = {1-6}
+}
+
+@INPROCEEDINGS{Lee2017,
+	author = {Lee, Wen-Tin and Law, Po-Jen},
+	booktitle = {2017 International Conference on Applied System Innovation (ICASI)}, 
+	title = {A case study in applying security design patterns for IoT software system},
+	year = {2017},
+	pages = {1162-1165},
+	month = {May}
+}
+
+@inproceedings{Reinfurt20172,
+	author = {Reinfurt, Lukas and Breitenb\"{u}cher, Uwe and Falkenthal, Michael and Fremantle, Paul and Leymann, Frank},
+	title = {Internet of Things Security Patterns},
+	year = {2017},
+	publisher = {The Hillside Group},
+	address = {USA},
+	booktitle = {Proceedings of the 24th Conference on Pattern Languages of Programs},
+	articleno = {20},
+	numpages = {28},
+	location = {Vancouver, British Columbia, Canada},
+	series = {PLoP '17}
+}
+
+@inproceedings{Sinnhofer2016,
+	author = {Sinnhofer, Andreas Daniel and Oppermann, Felix Jonathan and Potzmader, Klaus and Orthacker, Clemens and Steger, Christian and Kreiner, Christian},
+	title = {Patterns to Establish a Secure Communication Channel},
+	year = {2016},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3011784.3011797},
+	doi = {10.1145/3011784.3011797},
+	booktitle = {Proceedings of the 21st European Conference on Pattern Languages of Programs},
+	articleno = {13},
+	numpages = {21},
+	location = {Kaufbeuren, Germany},
+	series = {EuroPlop '16}
+}
+
+@inproceedings{Syed2016,
+	author = {Syed, Madiha H. and Fernandez, Eduardo B. and Ilyas, Mohammad},
+	title = {A Pattern for Fog Computing},
+	year = {2016},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3022636.3022649},
+	booktitle = {Proceedings of the 10th Travelling Conference on Pattern Languages of Programs},
+	articleno = {13},
+	numpages = {10},
+	location = {Leerdam, AA, Netherlands},
+	series = {VikingPLoP '16}
+}
+
+@INPROCEEDINGS{Ur-Rehman2015,
+	author = {Ur-Rehman, Obaid and Zivic, Natasa},
+	booktitle = {2015 IEEE European Modelling Symposium (EMS)}, 
+	title = {Secure Design Patterns for Security in Smart Metering Systems}, 
+	year = {2015},
+	pages = {278-283},
+}
+
+@inproceedings{Ciria2014,
+	author = {Ciria, Jos\'{e} Carlos and Dom\'{\i}nguez, Eladio and Escario, In\'{e}s and Franc\'{e}s, \'{A}ngel and Lape\~{n}a, Mar\'{\i}a Jes\'{u}s and Zapata, Mar\'{\i}a Antonia},
+	title = {The <i>History-Based Authentication</i> Pattern},
+	year = {2014},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/2721956.2721960},
+	booktitle = {Proceedings of the 19th European Conference on Pattern Languages of Programs},
+	articleno = {30},
+	numpages = {9},
+	location = {Irsee, Germany},
+	series = {EuroPLoP '14}
+}
+
+@InProceedings{Fernandez2007,
+	author = {Fernandez, Eduardo B. and Ballesteros, Jose and Desouza-Doucet, Ana C. and Larrondo-Petrie, Maria M.},
+	editor = {Barker, Steve	and Ahn, Gail-Joon},
+	title = {Security Patterns for Physical Access Control Systems},
+	booktitle = {Data and Applications Security XXI},
+	year = {2007},
+	month = {07},
+	pages = {259--274},
+	volume = {4602}
+}
+
+@MISC{Kienzle2006,
+	author = {Darrell M. Kienzle and Matthew C. Elder and Ph. D and Ph. D and David Tyree and James Edwards-hewitt},
+	title = {Security patterns repository, version 1.0},
+	year = {2006}
+}
+
+
+
+
+
 

@@ -1,0 +1,85 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+% !TeX root = ../thesis.tex
+
+\chapter{Background}\label{ch:background}
+In order to simplify the following argumentation in this master's thesis and amplify the importance of secure IoT design, Section~\ref{sec:iot-risks} describes common security risks that users of IoT devices should be aware of. Then we introduce the top ten IoT vulnerabilities according to OWASP (see Section~\ref{sec:owasp}) and lastly conclude this chapter with different design methods for secure IoT development in Section~\ref{sec:design}. 
+
+
+\section{IoT Security Risks}\label{sec:iot-risks}
+When looking back at the smart home example of Section~\ref{sec:def}, we realize how many connections between different IoT devices and appliances are needed as basis for a modern smart system. But each of these communication paths can be seen as a potential risk for a cyber attack and these interfaces are not the only vulnerabilities of an IoT device. Hackers constantly develop new techniques to gain access to and control IoT systems with millions of attacks occurring every day. To give a few examples of what typical cyber attacks on IoT devices are, here are ten types that attackers commonly use:\footnote{\href{https://micro.ai/blog/10-types-of-cyber-security-attacks-in-the-iot}{https://micro.ai/blog/10-types-of-cyber-security-attacks-in-the-iot, last accessed: 06.12.2022.}} 
+\begin{itemize}
+	\item Physical Attacks. After gaining access a USB drive is used to spread malicious code.
+	\item Encryption Attacks. Capture of unencrypted data and control of system after decrypting the encryption keys.
+	\item Denial of Service. One target is attacked by a larger number of systems which leads to services being unavailable.
+	\item Firmware Hijacking. When firmware is not updated regularly, attackers can hijack it and download malicious software.
+	\item Botnets. Usage of smart devices to transfer private corporate data or disable devices.
+	\item Man-in-the-Middle. Intercepting the communication between two parties.
+	\item Ransomware. By locking down files, this malware is used to blackmail corporations to pay money in order to get access to their data.
+	\item Eavesdropping. Network traffic on a weak connection can be intercepted by an attack in order to gain sensitive data.
+	\item Privilege Escalation. Hackers use user profiles with higher privileges to deploy malware and steal confidential data that otherwise would be impossible.
+	\item Brute Force Password Attack. Also known as dictionary attack, the attacker tries a huge set of random phrases to access a password-protected service. 
+\end{itemize} 
+
+
+\section{Top Ten Common IoT Vulnerabilities}\label{sec:owasp}
+What are the biggest problems when building and managing an IoT system? This question is analysed and periodically updated by the Open Web Application Security Project or in short: OWASP\footnote{\href{https://owasp.org}{https://owasp.org, last accessed: 13.10.2022.}}. The goal of this particular project is to help developers as well as users of IoT to better understand its security risks and give suggestions on how to make better decisions when working with this technology. Table~\ref{tab:owasp10} shows the top ten common IoT vulnerabilities from the year 2018 when OWASP last updated their results.\footnote{\href{https://wiki.owasp.org/index.php/OWASP_Internet_of_Things_Project}{https://wiki.owasp.org/index.php/OWASP\_Internet\_of\_Things\_Project, last accessed: 09.09.2022.}}
+
+\begin{longtable}[c]{lp{4.5cm}p{7.5cm}}
+	\caption{Internet of Things Top Ten (2018) taken from OWASP Wiki\protect\footnotemark[\value{footnote}]}
+	\label{tab:owasp10}\\
+	\hline
+	\textbf{No.} & \textbf{Security Issue} & \textbf{Description} \\
+	\hline
+	\endfirsthead
+	%
+	\multicolumn{3}{c}%
+	{{\bfseries Table \thetable\ continued from previous page}} \\
+	\endhead
+	%
+	T1 & Weak, Guessable, or Hardcoded Password & Use of easily bruteforced, publicly available, or unchangeable credentials, including backdoors in firmware or client software that grants unauthorized access to deployed systems. \\
+	T2 & Insecure Network Services & Unneeded or insecure network services running on the device itself, especially those exposed to the internet, that compromise the confidentiality, integrity/authenticity, or availability of information or allow unauthorized remote control.\\
+	T3 & Insecure Ecosystem Interfaces & Insecure web, backend API, cloud, or mobile interfaces in the ecosystem outside of the device that allows compromise of the device or its related components. Common issues include a lack of authentication/authorization, lacking or weak encryption, and a lack of input and output filtering. \\
+	T4 & Lack of Secure Update Mechanism & Lack of ability to securely update the device. This includes lack of firmware validation on device, lack of secure delivery (un-encrypted in transit), lack of anti-rollback mechanisms, and lack of notifications of security changes due to updates.\\
+	T5 & Use of Insecure or Outdated Components & Use of deprecated or insecure software components/libraries that could allow the device to be compromised. This includes insecure customization of operating system platforms, and the use of third-party software or hardware components from a compromised supply chain.\\
+	T6 & Insufficient Privacy Protection & User’s personal information stored on the device or in the ecosystem that is used insecurely, improperly, or without permission.\\
+	T7 & Insecure Data Transfer and Storage & Lack of encryption or access control of sensitive data anywhere within the ecosystem, including at rest, in transit, or during processing.\\
+	T8 & Lack of Device Management & Lack of security support on devices deployed in production, including asset management, update management, secure decommissioning, systems monitoring, and response capabilities.\\
+	T9 & Insecure Default Settings & Devices or systems shipped with insecure default settings or lack the ability to make the system more secure by restricting operators from modifying configurations.\\
+	T10 & Lack of Physical Hardening & Lack of physical hardening measures, allowing potential attackers to gain sensitive information that can help in a future remote attack or take local control of the device.\\
+	\hline
+\end{longtable}
+
+
+\section{Secure IoT Design}\label{sec:design}
+This section focuses on different methods software developers use to simplify programming practices for object-oriented systems. We will discuss relevant patterns and architectures that support the design of secure IoT systems, e.g. design patterns, security-specific patterns, and architectures.
+
+\subsection{Design Patterns}
+The concept of design patterns in software development can be traced back to 1994 and the \q{Design Patterns - Elements of Reusable Object-Oriented Software} book~\cite{Gamma1994}. The authors stated that a design pattern should be based on the following two principles:
+\begin{itemize}
+	\item Program to an interface not an implementation.
+	\item Favour object composition over inheritance.
+\end{itemize}
+In general, design patterns are specific to a scenario and provide a standard terminology that help professionals in creating best solutions for certain common problems in their field. According to the referenced book, design patterns can be grouped into four different categories: 
+\begin{itemize}
+	\item Creational Patterns. Provide a way to create objects while hiding the creation logic.
+	\item Structural Patterns. Inheritance is used to create interfaces and define ways to compose objects to obtain new functionalities.
+	\item Behavioural Patterns. Manage communication between objects.
+	\item J2EE Patterns. Concerned with the presentation tier (identified by Sun Java Center).
+\end{itemize}
+Related categories that should be mentioned in this context would be anti-patterns\footnote{\href{https://www.bmc.com/blogs/anti-patterns-vs-patterns}{https://www.bmc.com/blogs/anti-patterns-vs-patterns, last accessed: 17.10.2022.}} and misuse patterns~\cite{Fernandez2009}. These patterns focus on common development mistakes and attacks respectively but because of their specific usage they are not further relevant for the topic of this master's thesis.
+
+\subsection{Security Patterns}
+If design patterns are re-usable solutions for common design problems, similar to that security patterns are intended to achieve specific security goals in a system. The security-by-design principle makes sure that the security aspect is in the forefront of the design process, integrated into the system and not added as an after-thought. The most important security goals are: \emph{Confidentiality, Integrity, Availability, Authentication, and Authorization}. A subcategory of security patterns can be found in the so-called privacy patterns\footnote{\href{https://privacypatterns.org}{https://privacypatterns.org, last accessed: 17.10.2022.}} that are specialized to guide developers in finding the best solution for common privacy problems in software development. They support developers in modelling privacy-by-design and creating practical software solutions in a standardized way.
+
+
+\subsection{Security Architectures}
+Cybersecurity threats are getting increasingly more common these days. As a way to protect ones system from cyberattacks and data breaches, security-specific architectures\footnote{\href{https://www.dig8ital.com/post/what-is-security-architecture-and-what-do-you-need-to-know}{https://www.dig8ital.com/post/what-is-security-architecture-and-what-do-you-need-to-know, last accessed: 19.10.2022.}} can be used. These architectures enable developers to implement their security goals and keep their digital assets safe by ultimately utilizing a set of security principles, methods and models. Every architect needs guidelines to work with. In the context of security architectures these rules are called \emph{frameworks}. There exist many international framework standards with The Open Group Architecture Framework (TOGAF), Sherwood Applied Business Security Architecture (SABSA) and Open Security Architecture (OSA) being common examples. Software breaches can mean very expensive losses for a company, not only in financial aspects but also the reputation of a company suffers. There are many good reasons to utilize a strong security architecture like:\footnotemark[\value{footnote}] 
+\begin{itemize}
+	\item Fewer security breaches. A strong security architecture is able to close common weaknesses and reduces the risk of successful system attacks. 
+	\item Money savings. Proactive security measures are able to detect and fix vulnerabilities earlier in the product development cycle. The later an error is detected, the more money it can cost. 
+	\item Disciplinary measures mitigation. In the event of an attack it matters to which degree the business tried to reduce its risk and prevent vulnerabilities beforehand in order to get a favourable outcome according to the regulations.
+\end{itemize}
+
+After establishing a definition for IoT, giving examples for common vulnerabilities in IoT systems and describing popular design methods in the context of IoT development, the basis for this master's thesis has been created. The following analysis will showcase the landscape of today's research in the field of IoT patterns and the lack of existing security-specific solutions. By collecting and sorting all gathered patterns into an exhaustive catalogue, a well-documented and hierarchically organized list was created that will guide future projects in the development of more security-focused systems.   
+

@@ -1,0 +1,925 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+% !TeX root = ../thesis.tex
+
+\chapter{IoT Security Pattern Catalogue}\label{ch:catalogue}
+This chapter lists all IoT security patterns that were collected during the previously explained search process in form of a catalogue for IoT developers. The pattern table~\ref{tab:patterns} is divided into the seven layers of the World Forum Reference Model (WFRM). Each pattern corresponds to a specific layer and is described by its name, a list of vulnerabilities from the OWASP top ten it can (possibly) solve as well as security objectives that are either addressed by this particular pattern (+) or not mentioned in its original description (-).
+
+For a more efficient use of space in the table that makes the information more concise but still easy to understand, we used specific abbreviations. Most of them were already previously introduced in this master's thesis. For a compact overview of the defined abbreviations, the following Table~\ref{tab:key} can be utilized.
+
+\begin{longtable}[c]{|cl|cl|}
+	\caption{Legend for pattern lookup table}
+	\label{tab:key}\\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{WFRM Architecture Layers}} & \multicolumn{2}{|c|}{\textbf{OWASP Top Ten Vulnerabilities}}\\
+	\hline
+	\endhead
+	%
+	L1 & Physical Devices \& Controllers & T1 & Weak, guessable or hardcoded passwords \\
+	L2 & Connectivity & T2 & Insecure network services \\
+	L3 & Edge Computing & T3 & Insecure ecosystem interfaces \\
+	L4 & Data Accumulation & T4 & Lack of secure update mechanisms \\
+	L5 & Data Abstraction & T5 & Use of insecure or outdated components \\ 
+	L6 & Application & T6 & Insufficient privacy protection \\
+	L7 & Collaboration \& Processes & T7 & Insecure data transfer and storage \\ 
+	\cline{1-2}
+	\multicolumn{2}{|c|}{\textbf{Security Objectives}} & T8 & Lack of device management\\
+	\cline{1-2}
+	C & Confidentiality & T9 & Insecure default settings  \\
+	I & Integrity & T10 & Lack of physical hardening \\
+	A & Availability & & \\
+	Ac & Authentication & & \\
+	Az & Authorization & & \\
+	\hline 
+\end{longtable}
+
+
+\begin{landscape}
+\begin{longtable}[c]{lllcccccccccccccccc}
+	\caption{IoT security pattern lookup table}
+	\label{tab:patterns} \\
+	\hline
+	\textbf{Layer} & \textbf{\#} & \textbf{Pattern Name} & \multicolumn{10}{c}{\textbf{Solution for}} & \multicolumn{5}{c}{\textbf{Security Concerns}} \\
+	& & & T1 & T2 & T3 & T4 & T5 & T6 & T7 & T8 & T9 & T10 & C & I & A & Ac & Az \\
+	\hline
+	\endhead
+	%
+	\multirow{5}{*}{\textbf{L1}} & \ref{p:hardware} & Hardware IoT Security & & \checkmark & & \checkmark & \checkmark & & & & & & + & - & - & + & - \\
+	& \ref{p:thing} & Secure IoT Thing & & \checkmark & \checkmark & & & & \checkmark & & & & + & + & + & - & - \\
+	& \ref{p:node} & Secure Sensor Node & & & \checkmark & & \checkmark & & \checkmark & & & & + & + & + & + & + \\
+	& \ref{p:segment} & Security Segmentation & & & \checkmark & & & & & & & & - & - & - & + & + \\
+	& \ref{p:tpm} & Trusted Platform Module & & & & & \checkmark & & \checkmark & & & & + & + & - & + & + \\
+	\hline
+	%
+	\multirow{14}{*}{\textbf{L2}} & \ref{p:ac} & Authenticated Channel & & \checkmark & & & & & \checkmark & & & & - & + & - & + & - \\ 
+	& \ref{p:ec} & Encrypted Channel & & \checkmark & & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:broker} & Middleware Message Broker & & & \checkmark & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:scmessage} & Middleware Self-contained Message & & & & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:sdn} & Orchestration of SDN Network Elements & & & \checkmark & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:con} & Outbound-Only Connection & & & & & & \checkmark & \checkmark & & & & + & - & - & - & + \\
+	& \ref{p:keyex} & Password Based Key Exchange & \checkmark & & & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:sc} & Safe Channel & & \checkmark & & & & & \checkmark & & & & - & + & - & - & - \\  
+	& \ref{p:readout} & Secure Remote Readout & & & & & & & \checkmark & & & & + & + & - & + & - \\  
+	& \ref{p:sm} & Signed Message & & & & & & & \checkmark & & & & - & + & - & + & - \\
+	& \ref{p:crypto} & Symmetric Key Cryptography & & & & & & & \checkmark & & & & + & - & - & + & - \\
+	& \ref{p:auc} & Third Party Based Authentication & & & & & & & \checkmark & & & & + & + & - & + & - \\
+	& \ref{p:partner} & Trusted Communication Partner & & & & & & \checkmark & \checkmark & & & & + & - & + & + & + \\
+	& \ref{p:trust} & Web of Trust & & & & & & & \checkmark & & & & - & + & - & + & - \\
+	\hline
+	%
+	\multirow{3}{*}{\textbf{L3}} & \ref{p:fog} & Fog Computing & & \checkmark & \checkmark & & & & \checkmark & & & & + & + & + & + & + \\ 
+	& \ref{p:fogxy} & Fogxy & & \checkmark & \checkmark & & & & \checkmark & & & & - & - & + & + & + \\ 
+	& \ref{p:cloud} & Secure Cloud-based IoT Architecture & & & \checkmark & & & & \checkmark & & & & + & + & + & + & + \\
+	\hline
+	%
+	\multirow{3}{*}{\textbf{L4}} & \ref{p:es} & Encrypted Storage & & & & & & \checkmark & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:rs} & Redundant Storage & & & & & & & \checkmark & & & & - & - & + & - & - \\
+	& \ref{p:ss} & Safe Storage & & & & & & \checkmark & \checkmark & & & & - & + & - & - & - \\
+	\hline
+	%
+	\multirow{4}{*}{\textbf{L5}} & \ref{p:translation} & Alignment-based Translation Pattern & & & \checkmark & & & & & & & & - & - & + & - & - \\
+	& \ref{p:block} & BlockBD & & & \checkmark & & & & \checkmark & & & & + & + & + & - & - \\
+	& \ref{p:discover} & Discovery of IoT Services & & & \checkmark & & & & & & & & - & - & + & - & - \\
+	& \ref{p:flow} & Flow-based Service Composition & & \checkmark & & & & & \checkmark & & & & + & - & - & - & - \\ 
+	\hline
+	\multirow{8}{*}{\textbf{L5}} & \ref{p:gateway} & IoT Gateway Event Subscription & & & \checkmark & & & & \checkmark & & & & + & - & + & - & - \\
+	& \ref{p:ssl} & IoT SSL Cross-Layer Secure Access & & & \checkmark & & & & & & & & + & + & - & + & + \\
+	& \ref{p:msgtranslator} & Middleware Message Translator & & & \checkmark & & & & & & & & - & - & + & - & - \\
+	& \ref{p:middleware} & Middleware Simple Component & & & & & & & & & & & + & - & - & - & - \\
+	& \ref{p:rest} & D2D REST Request/Response & & & \checkmark & & & & & & & & + & - & + & - & + \\
+	& \ref{p:sandbox} & Server Sandbox & & & & & & & & & \checkmark & \checkmark & + & + & + & - & - \\ 
+	& \ref{p:orchest} & Service Orchestration & & & \checkmark & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:ontology} & Translation with Central Ontology & & & \checkmark & & & & & & & & - & - & + & - & - \\
+	\hline
+	%
+	\multirow{15}{*}{\textbf{L6}} & \ref{p:acp} & Access Control to Physical Structures & & & & & & & & & & \checkmark & - & - & - & + & + \\
+	& \ref{p:alarm} & Alarm Monitoring & & & & & & & & \checkmark & & & - & - & - & - & + \\
+	& \ref{p:log} & Audit Log & & & & & & & & \checkmark & & & - & + & - & - & - \\  
+	& \ref{p:acs} & Authenticated Session & & & \checkmark & & & & & & & & - & - & - & + & - \\
+	& \ref{p:aze} & Authorization Enforcer & & & & & & & & \checkmark & & & - & - & - & - & + \\
+	& \ref{p:ep} & Encrypted Processing & & & & & & & \checkmark & & & & + & - & - & - & - \\
+	& \ref{p:fault} & Fault Management & & & & & & & & \checkmark & & & - & - & + & - & - \\ 
+	& \ref{p:fac} & File Authentication & & & & & & & \checkmark & & & & - & - & - & + & + \\
+	& \ref{p:mac} & Matrix Authentication & & & & & & & \checkmark & & & & - & - & - & + & + \\
+	& \ref{p:mine} & Minefield & & & & & \checkmark & & & & \checkmark & & - & + & - & - & - \\
+	& \ref{p:rac} & Remote Authenticator/Authorizer & & & & & & & \checkmark & & & & - & - & - & + & + \\
+	& \ref{p:rbac} & Role Based Access Control & & & & & & & \checkmark & & & & - & - & - & - & + \\
+	& \ref{p:sp} & Safe Processing & & & & & & & \checkmark & & & & - & + & - & - & - \\
+	& \ref{p:sdps} & Secure Distributed Publish/Subscribe & & & & & & & \checkmark & & & & + & + & + & + & + \\
+	& \ref{p:uptime} & Uptime & & & & & & & & \checkmark & & & - & - & + & - & - \\
+	\hline
+	%
+	\multirow{6}{*}{\textbf{L7}} & \ref{p:lockout} & Account Lockout & \checkmark & & & & & & & & & & - & - & - & + & - \\
+	& \ref{p:ace} & Authentication Enforcer & & & \checkmark & & & & & & & & - & - & - & + & - \\
+	& \ref{p:black} & Blacklist & & & \checkmark & & & & & \checkmark & & & - & - & - & + & + \\
+	& \ref{p:hauc} & History-Based Authentication & \checkmark & & & & & & & & & & + & + & - & + & + \\
+	& \ref{p:control} & Permission Control & & & & & & \checkmark & & \checkmark & \checkmark & & + & - & - & - & + \\
+	& \ref{p:hub} & Personal Zone Hub & & & & & & \checkmark & & & & & + & - & - & - & + \\
+	\hline
+	\multirow{3}{*}{\textbf{L7}} & \ref{p:relays} & Relays & & & & & & & & & & & - & - & - & - & + \\
+	& \ref{p:sap} & Single Access Point & & & \checkmark & & & & & & & & - & - & - & + & + \\
+	& \ref{p:white} & Whitelist & & & \checkmark & & & & & \checkmark & & & - & - & - & + & + \\
+	\hline
+\end{longtable}
+\end{landscape}
+
+
+
+\section{Physical Devices \& Controllers}\label{L1}
+The first set of patterns that are introduced in this section all belong to the Physical Devices \& Controllers layer of the IoT WFRM. These patterns typically enhance the security aspect of the IoT devices themselves like the Secure IoT Thing~\ref{p:thing} or their hardware components like the Trusted Platform Module~\ref{p:tpm} or Secure Sensor Node~\ref{p:node}. 
+
+
+\subsection{Hardware IoT Security~\cite{Schuss2018}}
+\label{p:hardware} 
+
+\paragraph{\textbf{Intent.}} The goal of the Hardware IoT Security pattern is to enable IoT device vendors to keep their new devices up-to-date by adding cryptographic co-processors externally to the hardware. Furthermore, all existing devices should be prepared for future security challenges and demands. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+
+\begin{itemize}
+	\item Offload cryptography. Separate business logic from security functionality to simplify updating and certification of devices.
+	\item Costs. Secure device with resourceful cryptography as well as minimal costs and power consumption. 
+	\item Security \q{ages}. The typical lifetime of an IoT device is much longer than the update cycle of a cryptographic function. Existing micro-controllers may not have the required resources for the new version.
+	\item Software bugs. The implementation of an algorithm is never as secure as the algorithm itself because of physical limitations. 
+	\item Malicious attacks. A specialized processor is often required for the mitigation of physical attacks like power analysis or timing attacks.
+	\item Provisioning. During production each device is assigned a private key. Only the manufacturer has access to the firmware the key is embedded in and must hereby be trusted.
+	\item Time-to-market. Each change in the underlying cryptography leads to a re-certification and auditing process of the entire developed product.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} Use exchangeable cryptographic co-processors to secure IoT devices.
+
+
+\subsection{Secure IoT Thing~\cite{Fernandez2021}} 
+\label{p:thing}
+
+\paragraph{\textbf{Intent.}} The Secure IoT Thing pattern's aim is to secure any (physical or virtual) entity that is connected to sensors and actuators.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Threat handling. All identified threats from attackers must be mitigated or resolved.
+	\item Diversity of things. Potentially malicious product owners as well as the devices themselves must be uniquely identifiable.
+	\item Vulnerability. Low-cost devices typically lack computational power for strong security defences. 
+	\item Complexity. The complexity of a system directly correlates to its security level by increasing the attack surface. 
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} In general, perfect security does not exist. By implementing basic security defences in every product, manufacturers would be able to counter a huge list of identified threats. Unfortunately, cost and performance goals are the reason a thorough security verification is impossible to achieve. But only when every security threat is eliminated, a device can be labelled as secure.
+
+
+\subsection{Secure Sensor Node~\cite{Orellana2020}} 
+\label{p:node}
+
+\paragraph{\textbf{Intent.}} As part of an IoT system, the Secure Sensor Node is responsible for receiving, storing and sending data between different nodes in a secure way. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Integrity, confidentiality, and availability. The sensor node has to make sure that transmitted data cannot be altered with and is at all times accessible to authorized entities.
+	\item Auditability. Authorized entities should be able to reconstruct and monitor historical as well as ongoing events. 
+	\item Overhead. Processing times of sensed data should be kept as small as possible.
+	\item Power consumption. Because of a known power constraint of IoT devices, the solution must use power economically. 
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} As an extension of the Sensor Node pattern, this solution provides security features that enable the sensor node to communicate and store data in a secure way. Additionally, for auditing purposes a record of all occurring events is collected. Therefore, the implementation of additional encryption techniques, logging mechanisms as well as authentication and authorization controls are required. 
+
+
+\subsection{Security Segmentation~\cite{Fernandez20201}} 
+\label{p:segment}
+
+\paragraph{\textbf{Intent.}} The purpose of the Security Segmentation pattern is to partition IoT devices and entities into subnetworks according to their security requirements.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Heterogeneity. IoT devices are equipped with different levels of security features which need to be considered.
+	\item Identity. A unique identification process is required to keep an overview of all participating devices in a specific network.
+	\item Security level. Prioritization policies are needed to avoid conflicts between authorization rules from different sources.
+	\item Attack surface. The complexity of a system and its variety of devices correlates to its increasing vulnerability.
+	\item Compliance. Device heterogeneity hinders the enforcement of compliance rules.
+	\item Threats. CPSs have an increased number of threats that may have safety consequences on the IoT system.
+\end{itemize} 
+
+\paragraph{\textbf{Solution.}} Divide the network into small units. Identified and more well-known devices are placed into the sensitive partitions. A combination of firewalls and VLANs (Virtual Local Area Networks) is used to achieve the segregation of devices.   
+
+
+\subsection{Trusted Platform Module~\cite{Munoz2020}} 
+\label{p:tpm}
+
+\paragraph{\textbf{Intent.}} The Trusted Platform Module (TPM) pattern is intended for verification of hardware and software as well as  assuring trustability before execution. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Attestation. For secure software execution attestation is used to verify that a software platform is legitimate.
+	\item Secure cryptography. The generation of keys must be secure for a reliable encryption/decryption process.
+	\item Secure signature generation. For message authenticity the secure generation of signatures is needed. 
+	\item Data integrity. Only authorized entities should be able to manipulate data. 
+	\item Secure processing. During the execution of software information should not be leaked or illegally modifiable.
+	\item Dynamic root of trust (DRT). As a starting point for the \q{chain of trust} the DRT refers to the first reliable measurement of the chain.
+	\item Authenticated boot. The implementation of the transitive \q{chain of trust} relies on the monitoring of the boot process. 
+	\item Sealed-bound key. These keys are bound to the platform state during their generation to ensure their origin.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} The TPM is a hardware module that can attest hardware as well as software with its integrated cryptographic services. The verification process utilizes a set of cryptographic keys as well as the concept of \q{chain of trust}. Further applications of the TPM include the storage of secret keys and the execution of encryption or decryption respectively.
+
+
+\section{Connectivity}\label{L2}
+A very important part of every computer system is its transportation layer that is responsible for an efficient and safe data exchange in the network. The WFRM for IoT systems calls this the Connectivity layer. The goal of keeping connections between different devices or architecture layers safe is supported by a variety of patterns like Authenticated Channels~\ref{p:ac}, Password Based Key Exchange~\ref{p:keyex} or even Signed Messages~\ref{p:sm}.
+
+\subsection{Authenticated Channel~\cite{Papoutsakis2021}} 
+\label{p:ac}
+
+\paragraph{\textbf{Intent.}} The Authenticated Channel pattern ensures that the communication routes of an IoT system are trustworthy and reliable even for private conversations.
+
+\paragraph{\textbf{Solution.}} To achieve this goal, an authenticated channel should require mutual authentication of all communication partners. Also, the secret key should be verifiable by at least one peer to confirm the common secret that is used for a safe channel. Lastly, no communication partner should be able to retrieve old session keys, even when long-term secret keys, like certificates, are known. Therefore, forward secrecy is a major key point of ensuring attackers cannot eavesdrop private conversations.
+
+
+\subsection{Encrypted Channel~\cite{Papoutsakis2021}} 
+\label{p:ec}
+
+\paragraph{\textbf{Intent.}} The goal of the Encrypted Channel pattern is to keep sent information confidential during transmission across networks. 
+
+\paragraph{\textbf{Problem.}} Public networks and channels are easy to be intercepted and eavesdropped by malicious third parties.
+
+\paragraph{\textbf{Solution.}} The easiest way to achieve confidentiality is encryption. By utilizing the typical TCP handshake and exchanging cryptographic information, communication partners are able to establish an encrypted channel between them. 
+
+
+\subsection{Middleware Message Broker~\cite{Tkaczyk2018}} 
+\label{p:broker}
+
+\paragraph{\textbf{Intent.}} The IoT Artifact's Middleware Message Broker is a pattern whose purpose is to manage the communication between IoT artifacts.
+
+\paragraph{\textbf{Problem.}} In order to avoid exposing internal operations of different independent components in the middleware, multiple interfaces that enable point-to-point connections should not be implemented. The usage of point-to-point interfaces can also lead to problems regarding the management quality of service requirements, the matching of security constraints and dynamic reconfiguration.
+
+\paragraph{\textbf{Solution.}} The Message Broker acts as a common messaging interface and therefore solves the mentioned problem by hiding the internal operations of components, using logical names for the communication partners and functioning as a middle-man in the message transmission process. For a successful message delivery of the broker each message must contain a label and the information to send as payload. 
+
+
+\subsection{Middleware Self-contained Message~\cite{Tkaczyk2018}} 
+\label{p:scmessage}
+
+\paragraph{\textbf{Intent.}} The IoT Artifact's Middleware Self-contained Message pattern requires each message to consist of the complete information needed for execution of a specific action.
+
+\paragraph{\textbf{Problem.}} Middleware components should only need to store the minimal required amount of resources. Therefore, messages within must contain all information that is needed for their interpretation and execution. Regardless of when the event or command is interpreted, the message should obtain complete information on how to execute it. 
+
+\paragraph{\textbf{Solution.}} To identify different messages, the middleware component processes and routes them based on a distinct set of types. Each message that travels downstream can have an answer that is routed in the reverse direction. This enables conversations to be distinguished by matching downstream travelling messages with upstream ones.
+
+
+\subsection{Orchestration of SDN Network Elements~\cite{Tkaczyk2018}} 
+\label{p:sdn}
+
+\paragraph{\textbf{Intent.}} This pattern's main controller aims to orchestrate all SDN elements (virtual switches) of a network. Hereby, the orchestrator manages the transmission of flow and control messages between different network topologies and configurations.
+
+\paragraph{\textbf{Problem.}} The main issue of domain-focused IoT deployments is their isolated nature. 
+
+\paragraph{\textbf{Solution.}} One way to fix this problem is to move the communication from the device layer upwards into a higher part of the architecture model. The network layer, for instance, can implement this pattern which is also used in virtual SDNs, where a single orchestrator monitors all elements (virtual resources or instances) of the network. This single virtual LAN consists of virtually connected networks which are located in different locations. By utilizing this main controller the physical separation of networks disappears.
+
+
+\subsection{Outbound-Only Connection~\cite{Reinfurt20172}} 
+\label{p:con}
+
+\paragraph{\textbf{Intent.}} An Outbound-Only Connection pattern allows, like the name suggests, only communication that is initiated from the device itself while blocking all incoming connection requests. This prevents attackers from sending malicious messages and infecting the receiver.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Security. All unsolicited messages must be ignored.
+	\item Functionality. While blocking malicious requests, the original functionality of the device should not be affected. 
+	\item Constraints. Because of resource limitations, IoT devices are constrained in their solutions for communication control.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} A solution for this problem would be to only allow the devices themselves to initiate communication. Furthermore, devices should only accept incoming messages that are responses to previously sent connection requests. 
+
+
+\subsection{Password Based Key Exchange~\cite{Sinnhofer2016}} 
+\label{p:keyex}
+
+\paragraph{\textbf{Intent.}} The goal of the Password Based Key Exchange pattern is to secure communication with a common secret that is ideally \q{short} and easy to remember.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Limited access. It is difficult to securely load or store a private key file on a device. 
+	\item User experience. The original functionality of the device should not be affected by the implemented security mechanisms.
+	\item Eavesdropping. Expect that the integrity of messages will be violated by malicious third parties.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} A common secret between the communication parties is used to generate session key pairs. These random session keys secure the communication channel further. 
+
+
+\subsection{Safe Channel~\cite{Papoutsakis2021}} 
+\label{p:sc}
+
+\paragraph{\textbf{Intent.}} The purpose of the Safe Channel pattern is to guarantee integrity during message transmission on the transport layer by utilizing certificates.
+
+\paragraph{\textbf{Problem.}} Public communication channels are lacking security and are therefore open for interceptions by malicious third parties who can tamper with sensitive information.
+
+\paragraph{\textbf{Solution.}} As an example, the file channel integrity tool in Apache Fume is an efficient distributed system that specializes on the transmission, collection and aggregation of large log data from different sources. Also, the Transmission Control Protocol (TCP) supports the detection of data tampering by implementing a (non-cryptographic) checksum.
+
+
+\subsection{Secure Remote Readout~\cite{Ur-Rehman2015}}
+\label{p:readout}
+
+\paragraph{\textbf{Intent.}} The Secure Remote Readout pattern supports a secure implementation of the remote readout functionality.
+
+\paragraph{\textbf{Problem.}} Measurements that are sent from the gateway to the remote entity need to be protected from malicious third parties. 
+
+\paragraph{\textbf{Solution.}} A dedicated hardware (Security Module) is in charge of securing information that is transmitted from the gateway over insecure WAN. En-/Decryption, digital signatures, key generation and secure key storage are all cryptographic functionalities the security module provides. The digitally signed and encrypted measurements are exchanged over a Transport Layer Security (TLS) connection between the gateway and the remote entity. 
+
+
+\subsection{Signed Message~\cite{Papoutsakis2021}} 
+\label{p:sm}
+
+\paragraph{\textbf{Intent.}} The purpose of the Signed Message pattern is to guarantee the authenticity, integrity as well as non-repudiation of all exchanged messages.
+
+\paragraph{\textbf{Solution.}} The sender of a message is associated with it by utilizing their digital signature during the generation and/or exchange process.
+
+
+\subsection{Symmetric Key Cryptography~\cite{Sinnhofer2016}}
+\label{p:crypto}
+
+\paragraph{\textbf{Intent.}} The purpose of Symmetric Key Cryptography is to hinder malicious third parties from eavesdropping or intercepting private message exchanges. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Computational complexity. The applied security protocol should not affect the required computational overhead.
+	\item Resource constraints. IoT devices with limited storage capacity may be unable to store long keys that are needed for asymmetric cryptography.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} Symmetric cryptography utilizes a common secret that is shared between communication partners to encrypt exchanged messages. To authenticate the communicating parties before a trustworthy connection can be established, a handshake is required.
+
+
+\subsection{Third Party Based Authentication~\cite{Sinnhofer2016}}
+\label{p:auc}
+
+\paragraph{\textbf{Intent.}} The Third Party Based Authentication pattern aims to establish trust between parties that are unknown to each other. The authenticated communication channel is then secure against the intrusion of malicious attackers who try to eavesdrop or intercept the communication.
+
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item User experience. The functionality of a system should not be affected by the implemented security mechanisms. 
+	\item Computational complexity. Compared to symmetric cryptography, asymmetric cryptography, that uses public/private key pairs, is more time consuming.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} The authentication process of communication parties can be handled by public key cryptography based on certificates. Then a session key is generated and used for safe communication between the parties.
+
+
+\subsection{Trusted Communication Partner~\cite{Reinfurt20172}}
+\label{p:partner} 
+
+\paragraph{\textbf{Intent.}} The Trusted Communication Partner pattern suggests to limit the range of communication partners of a device to only trusted sources. Unknown devices may pose a security risk and try to access the device or launch a denial of service attack. Therefore they should be blocked for their connection requests.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Uninvited communication. Connection requests from unknown sources should be blocked.
+	\item Functionality. Implemented security mechanisms should not affect the operation of a system.
+	\item Flexibility. It should not matter if communication partners are static or frequently changing.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} To connect your device to trusted sources, implement a list of trusted parties. The device only allows incoming messages from the listed communication partners. If a connection request comes from an unknown source, the attempt should be blocked and investigated.
+
+
+\subsection{Web Of Trust~\cite{Sinnhofer2016}} 
+\label{p:trust}
+
+\paragraph{\textbf{Intent.}} The Web of Trust represents a structured way to establish trust in a network of communication parties without a central authority.
+
+\paragraph{\textbf{Problem.}} The participants do not want to rely on an outside party to authenticate the communication partners. 
+
+\paragraph{\textbf{Solution.}} Only by verifying the fingerprint themselves, can each communication party build trust in the key individually. A central authentication authority is not needed in this case.
+
+
+
+\section{Edge Computing}\label{L3}
+As a way to connect the data and control layers of an IoT system to the higher cloud, the Edge Computing layer of the WFRM architecture functions as a kind of interface. Patterns, that contribute to this cloud infrastructure, are for example Fog Computing~\ref{p:fog} or also Fogxy~\ref{p:fogxy}.
+
+
+\subsection{Fog Computing~\cite{Syed2016}} 
+\label{p:fog}
+
+\paragraph{\textbf{Intent.}} Between the cloud and edge devices there is a virtualized platform called fog computing. The platform allows the cloud to communicate with the devices in the network and to provide computation, storage as well as network services.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Large number of nodes. A large amount of data is produced by the nodes in the network that must be aggregated and analysed.
+	\item Latency. Because of the applications' geographical distance from the cloud data centres, data transmission is sensitive to latency. 
+	\item Mobility. Edge devices are typically mobile but this should not affect the efficiency of the IoT system.
+	\item Location awareness. Some applications need information about the geographical location of their device. 
+	\item Heterogeneity. Different IoT components,  like routers, switches, access points, end user devices with their own protocols and interfaces, need to be manageable in a uniform way.
+	\item Transparency. Limitations of a device's storage, communication or computational power need to be transparent to the user.
+	\item Big data analytics. Central analysis in data centres of the huge amount of data from edge devices is not feasible.
+	\item Cloud support. For permanent storage and long-term computations cloud data centres may still be necessary.
+	\item Scalability/Flexibility. Constant change demands a dynamic approach to resource and device allocation.
+	\item Multi-tenancy. Resource sharing is a recommended way to support multiple applications.
+	\item Multiplicity of providers. Distributed IoT systems need to be able to orchestrate consistent policies across multiple providers.
+	\item Security. Access control to data from different devices, the fog or the cloud needs to be implemented for identity authentication and authorization.
+	\item Filtering. In order to avoid inefficient bandwidth usage and security issues, filtering of (mostly unnecessary) data is recommended.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} Fog Computing can be described as a platform that is closer to the devices themselves but at the same time provides cloud computing-like services like storage, computation and networking. In addition, fog computing offers benefits like low latency, bandwidth efficiency, location awareness, security and filtering services. While most of the data is immediately processed at the device to improve response times, aggregated data can be send to the cloud for further analysis. In general, the fog structures the communication between edge devices and the cloud.
+
+
+\subsection{Fogxy~\cite{Seitz2018}} 
+\label{p:fogxy}
+
+\paragraph{\textbf{Intent.}} The purpose of the Fogxy pattern is to provide an architectural solution for applications whose availability, real-time or low latency requirements cannot be accomplished by utilizing cloud-only implementations. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Low latency \& real-time interaction. The unavoidable communication overhead and geographical distribution make a central data centre unsuitable to accommodate the real-time, short latency requirements of an IoT application. 
+	\item Standardization, heterogeneity, and interoperability. There is no standard for fog computing which ranges from embedded devices to virtualized platforms. Devices and components are distributed across the system and the interoperability of different providers must be guaranteed. 
+	\item Resource limitation. Because of their specific purpose devices in the fog layer contain limited storage, computing power and energy resources.
+	\item Geographical distribution. Unlike the cloud, which resides in central data centres, fog nodes are widespread even to remote locations without internet connection. 
+	\item Missing \& inadequate infrastructure. The insufficient cloud infrastructure as well as higher network speed and availability requirements cause an increased network load and possible restrictions. 
+	\item Interplay with the cloud. For an efficient collaboration cloud components should handle computationally or memory intensive tasks while embedded devices perform real-time critical ones.
+	\item Access control. To avoid security problems, an authentication and authorization process must regulate which components can use services and which cloud data can be accessed. 
+	\item Location awareness. In order to efficiently perform task distribution and service provisioning, devices must be traceable.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} By decoupling heterogeneous smart objects from centralized components, Fogxy implements real-time and availability requirements. System components that are located in different tiers can be distributed along a cloud-thing continuum. The decentralized approach enables smart objects and their services to facilitate real-time critical applications. 
+
+
+\subsection{Secure Cloud-based IoT Architecture~\cite{Fernandez20203}} 
+\label{p:cloud}
+
+\paragraph{\textbf{Intent.}} The Secure Cloud-based IoT Architecture tries to overcome system threats and simplify the management of security. The implemented defence mechanisms include authentication, authorization, security logger, secure channel and firewalls.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Quantity of things. Security management of a huge number of things is quite complex.
+	\item Diversity of things. Different vendors and possible owners make controlling IoT devices difficult.
+	\item Vulnerability of things. Because of limited resources the security defences of IoT devices are rather weak.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} By utilizing a layered hierarchy, security protection for IoT data assets and communication channels can be defined.
+
+
+\section{Data Accumulation}\label{L4}
+As a storage facility between architecture layers, the Data Accumulation layer is responsible for processing transmission queues in the IoT WFRM for further delivery. The storage of data can have a lot of vulnerabilities that are addressed by patterns to help strengthen the confidentiality, availability and integrity properties. Common examples are the Encrypted Storage~\ref{p:es}, Redundant Storage~\ref{p:rs}, and Safe Storage~\ref{p:ss}.
+
+
+\subsection{Encrypted Storage~\cite{Kienzle2006}} 
+\label{p:es}
+
+\paragraph{\textbf{Intent.}} To ensure that stolen data from a storage is useless to an attacker, the Encrypted Storage pattern acts as a second line of defence. It strengthens the protection mechanisms that already exist, such as firewalls and other server defences, and keeps sensitive data hidden from unauthorized users.
+
+\paragraph{\textbf{Problem.}} The loss of sensitive customer data can ruin the image of a company and it is very hard to recover from adverse publicity in modern society. But because the storage of private data, like credit card numbers, is sometimes unavoidable for certain services, the defences to protect user information have to be improved.
+
+\paragraph{\textbf{Solution.}} To avoid attackers from simply reading sensitive data, that is stored in a storage facility, critical data is encrypted before it is ever committed to disk. This way sensitive information has to be decrypted in memory before is can be accessed by anyone.
+
+
+\subsection{Redundant Storage~\cite{Papoutsakis2021}} 
+\label{p:rs}
+
+\paragraph{\textbf{Intent.}} The purpose of the Redundant Storage pattern is to safely manage the failure of cloud storage devices.
+
+\paragraph{\textbf{Solution.}} A solution would be the usage of a distributed redundant array of independent drives (RAID) or other redundant data system. In the case of device failure parity devices can be utilized to restore the lost data. The same applies to the recovery of a failed parity device.
+
+
+\subsection{Safe Storage~\cite{Papoutsakis2021}} 
+\label{p:ss}
+
+\paragraph{\textbf{Intent.}} The aim of the Safe Storage pattern is to guarantee that the contents of the storage remain complete, accurate and reliable. This means that the storage facility ensures the integrity of all sensitive data regardless of the length of its storage time nor its access frequency.
+
+\paragraph{\textbf{Solution.}} A few examples on how to implement this kind of integrity properties are Hash Checks, the Server Sandbox or Minefield patterns.
+
+
+
+\section{Data Abstraction}\label{L5} 
+All data, that is accumulated from different layers of the WFRM architecture, gets sorted and prepared for further processing in the Data Abstraction layer. By aggregating and analysing the data, that is incoming from different IoT devices, a smooth transmission of information between the layers is guaranteed. A few examples for patterns, that provide these types of interfaces, are BlockBD~\ref{p:block}, REST Request/Response~\ref{p:rest} or the Server Sandbox~\ref{p:sandbox}.
+
+
+\subsection{Alignment-based Translation~\cite{Tkaczyk2018}}
+\label{p:translation} 
+
+\paragraph{\textbf{Intent.}} The Alignment-based Translation pattern is responsible for the semantic translation of RDF messages that are transmitted between IoT artifacts. The translation process is based on the sets of correspondences that are defined between artifacts' ontologies.
+
+\paragraph{\textbf{Problem.}} Because of different technologies, that are used in developing artifacts, their interoperation is hindered by a syntactic as well as semantic discrepancy.
+
+\paragraph{\textbf{Solution.}} Since other formats are uniformly transformable into RDF, this solution assumes RDF messages. Because the semantics of a message depend on the artifact, interoperability can only be achieved by mapping between URIs, parts of the RDF structure, transformations etc. For an easy way to submit messages, that need to be translated and published, the translator should implement the needed interfaces.
+
+
+\subsection{BlockBD~\cite{Moreno2019}} 
+\label{p:block}
+
+\paragraph{\textbf{Intent.}} The aim of BlockBD is to improve security goals like traceability and veracity of stored data by implementing Blockchain technologies in a typical Big Data ecosystem. Thus, enhancing the overall quality of the algorithms' results.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Speed. The velocity of the obtained insights or sometimes even real-time analysis is often critical in a Big Data system.
+	\item Efficiency. The power consumption of the server clusters in a Big Data system, especially in ad-hoc solutions, is high enough that it has to be considered.
+	\item New security problems. New technological solutions in Big Data systems most likely also lead to new security challenges.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} BlockBD utilizes the implementation of an additional Blockchain layer that acts as a distributed ledger system. The layer is based on the already used nodes of the Big Data ecosystem and manages the stored data.
+
+
+\subsection{Discovery of IoT Services~\cite{Tkaczyk2018}} 
+\label{p:discover}
+
+\paragraph{\textbf{Intent.}} The Discovery of IoT Services pattern functions as a registry of IoT services for artifacts.
+
+\paragraph{\textbf{Problem.}} In order to notice and use an IoT service, the different platforms need to present these functionalities in an accessible and discoverable way.
+
+\paragraph{\textbf{Solution.}} For easy access a service catalogue is implemented that shows all registered IoT services.
+
+
+\subsection{Flow-based Service Composition~\cite{Tkaczyk2018}}
+\label{p:flow} 
+
+\paragraph{\textbf{Intent.}} The Flow-based Service Composition pattern's goal is to manage the interoperability of different IoT artifacts by modifying the execution flow.
+
+\paragraph{\textbf{Problem.}} Applications and services are defined as networks of \q{black box} processes that communicate over predefined connections. But there exists no pattern that specifies the execution flow of multiple IoT services. 
+
+\paragraph{\textbf{Solution.}} This approach arranges a sequential execution flow for IoT services by connecting the black boxes and linking the output of one service to the input of another.
+
+
+\subsection{IoT Gateway Event Subscription~\cite{Tkaczyk2018}} 
+\label{p:gateway}
+
+\paragraph{\textbf{Intent.}} The IoT Gateway Event Subscription pattern splits a gateway into two parts in order to achieve more flexibility in the data transmission process. The physical part is responsible for network access and communication protocols, whereas the virtual one manages the remaining gateway operations and services. This method makes it also possible to decouple data providers from their identities.
+
+\paragraph{\textbf{Problem.}} In order to enable communication between heterogeneous IoT devices, an asynchronous channel between the communication partners has to be implemented that allows data to be published, filtered and consumed.
+
+\paragraph{\textbf{Solution.}} This pattern utilizes the IoT gateway as a subscription mechanism and middle-man between IoT artifacts. Thus, the gateway performs protocol conversion if needed. Like the publish/subscribe pattern, senders publish messages without knowledge of their receivers and subscribers receive only messages they expressed interest in. Therefore, messages need to contain the subscription information.
+
+
+\subsection{IoT SSL CROSS-Layer Secure Access~\cite{Tkaczyk2018}}
+\label{p:ssl}
+
+\paragraph{\textbf{Intent.}} The IoT SSL CROSS-Layer Secure Access pattern tries to implement external interfaces of every layer of the IoT system to ensure secure communication channels.
+
+\paragraph{\textbf{Problem.}} Layered architectures in an IoT system consist of many interfaces that increase the attack surface.
+
+\paragraph{\textbf{Solution.}} As a solution to secure the access of each architecture layer and its exposed REST APIs, the Secure Sockets Layer (SSL) pattern is implemented. This way only authenticated entities are able to access the external interfaces.
+
+
+\subsection{Middleware Message Translator~\cite{Tkaczyk2018}} 
+\label{p:msgtranslator}
+
+\paragraph{\textbf{Intent.}} The Middleware Message Translator's job is to transform an IoT artifact's middleware internal message format to any platform's own data formats.
+
+\paragraph{\textbf{Problem.}} In order to enable message transmissions between IoT artifacts, the middleware first has to syntactically and semantically translate any sent messages.
+
+\paragraph{\textbf{Solution.}} The message translator is able to convert messages between proprietary data models and the middleware component's own data format.
+
+
+\subsection{Middleware Simple Component~\cite{Tkaczyk2018}} 
+\label{p:middleware}
+
+\paragraph{\textbf{Intent.}} The purpose of the Middleware Simple Component pattern is to ensure that the single responsibility principle is employed for each IoT artifact. 
+
+\paragraph{\textbf{Problem.}} An issue can be, that in more complex systems different components may need to perform specific functions.
+
+\paragraph{\textbf{Solution.}} For simplified operations the responsibilities of components should be divided recursively until the needed granularity is achieved. This way testing and debugging can also be performed more efficiently.
+
+
+\subsection{REST Request/Response~\cite{Tkaczyk2018}} 
+\label{p:rest}
+
+\paragraph{\textbf{Intent.}} This pattern is a request/response solution for gateway connections in the device-to-device layer.
+
+\paragraph{\textbf{Problem.}} In order for the IoT gateway to receive data and execute orders, it needs to be able to communicate with IoT artifacts. Therefore, the artifact's middleware must be able to connect to the gateway and enable a message exchange between them.
+
+\paragraph{\textbf{Solution.}} This approach utilizes a Request/Response pattern that enables IoT artifacts to connect through a HTTP/REST API. The communication works by sending a request message to a replier system and after processing the response is returned.
+
+
+\subsection{Server Sandbox~\cite{Kienzle2006}} 
+\label{p:sandbox}
+
+\paragraph{\textbf{Intent.}} The aim of the Server Sandbox pattern is to isolate the web server in order to protect it from damage that can be caused by undiscovered bugs in the server software.
+
+\paragraph{\textbf{Problem.}} Because it is an impossible task to ensure that a server is secure against all possible threats, it is important to protect the software in a manner that keeps the damage of a compromised system minimal.
+
+\paragraph{\textbf{Solution.}} The Server Sandbox strictly restricts the privileges that components of web applications have during runtime in order to minimize the possession of privileges that are unnecessary or can be easily abused to compromise the system. By removing the user access to all global privileges and replacing it with specific user and group privileges, the risk of allowing hackers easy access to the operating system is decreased. In addition, it is necessary to physically harden the system that is hosting the server. 
+
+
+\subsection{Service Orchestration~\cite{Tkaczyk2018}} 
+\label{p:orchest}
+
+\paragraph{\textbf{Intent.}} The Service Orchestration pattern manages the interactions between diverse, heterogeneous IoT services.
+
+\paragraph{\textbf{Problem.}} In order for heterogeneous IoT artifacts to be able to work together, many different services have to be orchestrated. It is important for the message flow to not only facilitate that sent data arrives at its destination, but also that specific actions need to be triggered on the way. A common issue is that these processes/actions are rarely reused but rather duplicated.  
+
+\paragraph{\textbf{Solution.}} The main idea is to define a set of IoT nodes, e.g services and interfaces that are controlled by an internal element that assigns specific tasks. By managing all processes it is possible to orchestrate these diverse IoT services in a unified way.
+
+
+\subsection{Translation with Central Ontology~\cite{Tkaczyk2018}}
+\label{p:ontology} 
+
+\paragraph{\textbf{Intent.}} The Translation with Central Ontology pattern focuses on the communication between IoT artifacts by semantically translating RDF messages that are based on a common data model. 
+
+\paragraph{\textbf{Problem.}} A modularized central ontology on the basis of IoT and domain ontologies has to be created in order to achieve semantically common translations.
+
+\paragraph{\textbf{Solution.}} When the central ontology is based on already existing standards, advantages like better scalability and easier long-term maintenance are guaranteed. In addition, the translator should provide an interface for submitting messages to translate and publish the results.
+
+
+
+\section{Application}\label{L6}
+The Application layer of the WFRM architecture specifically focuses on application logic that manages, monitors, analyses and otherwise optimizes IoT related applications. The Audit Log~\ref{p:log}, Authorization Enforcer~\ref{p:aze} or Safe Processing~\ref{p:sp} are a few examples that fall into this category of application-focused patterns.
+
+
+\subsection{Access Control to Physical Structures~\cite{Fernandez2007}} 
+\label{p:acp}
+
+\paragraph{\textbf{Intent.}} The Access Control pattern manages the authentication and authorization of access to physical structures which include alarm monitoring, relays and time schedules.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Automatic access control. Each user is allowed access during a specific time of the day which needs to be automatically revocable.
+	\item Automatic activation. Devices can be automatically enabled in a time-based manner. 
+	\item Time representation. Each day of the week needs to be represented in a uniform way. 
+	\item Access restriction. Depending on its identity or other characteristics, each visitor's access is restrictable.
+	\item Boundaries. A clear definition of boundaries for each unit of access is needed.
+	\item Variety. Each visitor has different access needs.
+	\item Emergency. In case of an emergency, there need to be plans and policies on how to manage the usually closed units.
+	\item Logging. Is is necessary to track each access time frame of a visitor.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} In this approach the structure of the access control system is represented by a Role Based Access Control pattern. Furthermore, Alarm Monitoring and Relay patterns are implemented in order to manage time schedules. This way not only access control times can be monitored but also automatic actions are easier to facilitate.
+
+
+\subsection{Alarm Monitoring~\cite{Fernandez2007}} 
+\label{p:alarm}
+
+\paragraph{\textbf{Intent.}} The Alarm Monitoring pattern ensures warnings are sent in case of malicious attacks in a physical system. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Types. There exist physical and logical alarms.
+	\item Neglect. Alarms can be ignored.
+	\item Logical alarms. There are two states logical alarms can be set to: reset and alarm.
+	\item Physical alarms. There are four states physical alarms can be set to: reset, alarm, cut or short. Hereby, the last two states are caused by either faulty wiring or tampering. 
+	\item Logging. Each alarm's state needs to be constantly monitored.
+	\item Update. Interested parties need to be updated when an alarm's state changes.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} This solution implements the alarm entity and uses generalization to further separate the characteristics of a logical from a physical alarm. Additional information is included in the alarm to store the exact time of the event. For regular updates of system changes the Observer pattern is integrated.
+
+
+\subsection{Audit Log~\cite{Lee2017, Papoutsakis2021}} 
+\label{p:log}
+
+\paragraph{\textbf{Intent.}} The purpose of the Audit Log pattern is to monitor a system and record any significant events with detailed information. These records are then stored as encrypted log files on the server. 
+
+\paragraph{\textbf{Solution.}} There already exist many different applications that can be used to monitor an IoT system. By default UNIX systems contain a variety of standard log files that are directed to the /var partition. Tools like NetCool can also be used on the network level to aggregate data from different sources such as conventional text log files or UNIX syslog streams. 
+
+
+\subsection{Authenticated Session~\cite{Papoutsakis2021}} 
+\label{p:acs}
+
+\paragraph{\textbf{Intent.}} The Authenticated Session pattern manages the authenticated online identity of a user when browsing on the internet.
+
+\paragraph{\textbf{Solution.}} By utilizing web sessions, the user can access multiple protected pages without having to authenticate themselves more than once. The session keeps track of the current access time and expires after a specified time of inactivity.
+
+
+\subsection{Authorization Enforcer~\cite{Papoutsakis2021}} 
+\label{p:aze}
+
+\paragraph{\textbf{Intent.}} The aim of the Authorization Enforcer pattern is to control who is allowed to access specific restricted resources in a system.
+
+\paragraph{\textbf{Solution.}} This pattern specifies for each active user which and how different resources can be accessed. 
+
+
+\subsection{Encrypted Processing~\cite{Papoutsakis2021}} 
+\label{p:ep}
+
+\paragraph{\textbf{Intent.}} The Encrypted Processing pattern ensures that sensitive data stays protected during processing.
+
+\paragraph{\textbf{Problem.}} Typically data is decrypted before processing it which makes it vulnerable for tampering by unauthorized users.
+
+\paragraph{\textbf{Solution.}} Common approaches to implement this pattern are homomorphic functions and secure multi-party computation. The second one is based on additive secret sharing which involves the distribution of a common secret between the communication partners. 
+
+
+\subsection{Fault Management~\cite{Papoutsakis2021}} 
+\label{p:fault}
+
+\paragraph{\textbf{Intent.}} The definition of Fault Management is the handling of abnormal operation of a system. Its purpose is to correct the faulty behaviour and restore its original functionality.
+
+\paragraph{\textbf{Solution.}} In order to correct any faulty behaviour of a system, specific steps which are also called the \q{flow of fault management} can be followed:
+\begin{itemize}
+	\item Compile alarms.
+	\item Keep customers content by taking quick action.
+	\item Refine and connect alarms.
+	\item Analyse and test the system to identify bugs.
+	\item Discover a method to rectify the issue.
+	\item Confirm that the bug vanished.
+	\item Determine if the current fault management function is efficient.
+\end{itemize}
+
+
+\subsection{File Authentication~\cite{Ali2018}} 
+\label{p:fac}
+
+\paragraph{\textbf{Intent.}} The File Authentication pattern manages files in a system in which multiple user types have different privileges to access them.
+
+\paragraph{\textbf{Solution.}} An approach would be to group different users that want access to an application together and to create a home directory for an authenticated user. Then this directory can be spread over the internet to allow the other users access to the application.
+
+
+\subsection{Matrix Authentication~\cite{Ali2018}} 
+\label{p:mac}
+
+\paragraph{\textbf{Intent.}} The Matrix Authentication pattern specifies which privileges each user has to access the stored data.
+
+\paragraph{\textbf{Problem.}} In order to maintain a robust system, collected data needs to be accessed by multiple different applications. 
+
+\paragraph{\textbf{Solution.}} By utilizing a two-dimensional table, each user is assigned its own privileges to access the stored sensitive data.
+
+
+\subsection{Minefield~\cite{Kienzle2006}} 
+\label{p:mine}
+
+\paragraph{\textbf{Intent.}} The goal of the Minefield pattern is to confuse the attacker during a break-in by aggressively modifying the standard components of a system in a way that threat detection becomes easier.
+
+\paragraph{\textbf{Problem.}} Because attackers have access to the same commercial-off-the-shelf software as developers do, it is possible for them to easily infiltrate the familiar environment and avoid detection, even accelerating the process with already existing scripted tools.
+
+\paragraph{\textbf{Solution.}} There are a variety of customizations that the Minefield pattern can take advantage of to modify a common system and trick the attacker. First, it is possible to make scripted attack tools unusable by breaking their compatibility with the system. Second, alarm messages about an intruder can be sent to the user without alerting the attacker itself. Third, any method to make the attacker uncomfortable in the newly modified setting can be enough to fend off a breach.
+
+
+\subsection{Remote Authenticator/Authorizer~\cite{Ali2018}}
+\label{p:rac} 
+
+\paragraph{\textbf{Intent.}} The Remote Authenticator/Authorizer pattern is utilized to authenticate or authorize resources that are shared remotely over the internet.
+
+\paragraph{\textbf{Solution.}} By implementing a single entry point, this pattern is able to transparently control and authorize server access of any remote user.
+
+
+\subsection{Role Based Access Control~\cite{Ali2018}} 
+\label{p:rbac}
+
+\paragraph{\textbf{Intent.}} The aim of Role Based Access Control is to authorize access to resources based on specific user roles in a diverse system where interoperability is crucial.
+
+\paragraph{\textbf{Solution.}} This pattern is implemented by categorizing the application resources based on their importance in the system. In an extended version, each modified security policy also is provided with different administration roles.
+
+
+\subsection{Safe Processing~\cite{Papoutsakis2021}} 
+\label{p:sp}
+
+\paragraph{\textbf{Intent.}} The Safe Processing pattern ensures that data integrity is guaranteed during and after an application processes sensitive information.
+
+\paragraph{\textbf{Solution.}} By implementing the Minefield pattern or integrating any type of integrity check into a system, safe data processing can be made possible.
+
+
+\subsection{Secure Distributed Publish/Subscribe~\cite{Fernandez20202}} 
+\label{p:sdps}
+
+\paragraph{\textbf{Intent.}} The Distributed Publish/Subscribe pattern ensures that in an IoT system the publication of events can be securely decoupled from the subscribed users themselves.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Loose coupling. Subscribers should not be connected to publishers and vice versa.
+	\item Location transparency. The locations of subscribers/publishers are hidden.
+	\item Security degree. Varied protection requirements for different data sensitivity.
+	\item Attack surface. Keep number of vulnerabilities as low as possible.
+	\item Heterogeneity. Diverse IoT devices increase attack surface. 
+	\item Identity. Exact identification of participating network devices is needed.
+	\item Compliance. Regulations must be followed which may cause system restrictions.
+	\item Overhead. Keep computations for event distribution low.
+	\item Power consumption. Because of power constraints, IoT devices should be economic.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} The publish/subscribe functionality can be utilized by implementing this pattern. In addition, secure communication channels, access control mechanisms, security logging and digital signatures can be integrated to adapt the system to the required security levels.
+
+
+\subsection{Uptime ~\cite{Papoutsakis2021}} 
+\label{p:uptime}
+
+\paragraph{\textbf{Intent.}} The Uptime pattern can be used to monitor the availability of a specific resource over a given period of time and collect satisfaction or violation evidence in relation to the desired value.
+
+\paragraph{\textbf{Solution.}} There are two ways the uptime of a resource can be measured: The first method involves counting the absolute time a system has been running since the initial start. A second approach uses the total running time and divides it by the time the system has been active to obtain the uptime percentage.
+
+
+
+\section{Collaboration \& Processes}\label{L7} 
+The main point of the Collaboration \& Processes layer in the WFRM architecture is the user interaction with the IoT application that can be utilized to achieve economic value and engagement. In order to ensure a safe environment and monitor who is engaged with the platform, IoT devices can be secured using a Blacklist~\ref{p:black} combined with a Whitelist~\ref{p:white} or by implementing Permission Control~\ref{p:control} mechanisms. 
+
+
+\subsection{Account Lockout~\cite{Papoutsakis2021}} 
+\label{p:lockout}
+
+\paragraph{\textbf{Intent.}} The Account Lockout pattern restricts the user to a limited number of password attempts before the account gets locked. 
+
+\paragraph{\textbf{Problem.}} Attackers often use dictionaries to guess the password of a user's account.
+
+\paragraph{\textbf{Solution.}} This authentication approach can be implemented by following these steps:
+\begin{itemize}
+	\item Login screen requires username and password.
+	\item User requests a specific resource by entering its credentials.
+	\item If username is valid, the mediator retrieves account information.
+	\item Mediator evaluates if account is still locked.
+	\item Mediator checks validity of password. If it's not valid, failed login attempts are increased and the last failed login time is set.
+	\item After valid password was entered, resource request is granted and number of failed login attempts is set to 0.
+\end{itemize}
+
+
+\subsection{Authentication Enforcer~\cite{Papoutsakis2021}} 
+\label{p:ace}
+
+\paragraph{\textbf{Intent.}} The Authentication Enforcer pattern deals with the question on how to identify an entity and verify that it is who it claims to be.
+
+\paragraph{\textbf{Solution.}} When a user requests access to a specific resource, the Authentication Enforcer applies its authentication protocol. After successful authentication, an explicit or implicit Proof of Identity is generated. Therefore, the implementation of the authentication process includes the requirements definition, approach selection and information creation.
+
+
+\subsection{Blacklist~\cite{Reinfurt20172, Papoutsakis2021}} 
+\label{p:black}
+
+\paragraph{\textbf{Intent.}} A Blacklist is a register that lists all identifiers of communication partners that are denied access privileges due to previous abusive behaviour.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Intervention. Stop already existing abuse.
+	\item Prevention. Prevent future abuse.
+	\item Identification. Reliable identification of abusers.
+	\item Control. Manual adjustment of control mechanisms to define abusive behaviour.
+	\item Simplicity. Easy understanding and usage.
+	\item Efficiency. Normal functionality of IoT devices should not be affected.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} All identifiers of abusers are written on the Blacklist and can be modified via an administrative interface. Any user that is on the Blacklist and wants the privilege to access a resource is immediately blocked. If the communication partner is not on the list, he is allowed to proceed.
+
+
+\subsection{History-Based Authentication~\cite{Ciria2014}} 
+\label{p:hauc}
+
+\paragraph{\textbf{Intent.}} The purpose of History-Based Authentication is to prevent unauthorized users who disguise as legitimate ones from accessing resources they are not supposed to see.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Physical token. Tokens can be lost, impaired, taken or duplicated.
+	\item Biometry. Biometric authentication approaches mostly lack maturity and applicability.
+	\item Secure information. Authentication information needs to be hard to steal or replicate.
+	\item Passwords. Regularly changing passwords add security but also mean extra work to create and communicate new authentication information to authorities.
+	\item Complete. A more complete authentication means it is harder to bypass it.
+	\item Proportionality. A task's resources should be proportional to its prevalence and urgency level.
+	\item Disguise. Impersonation of authenticated users must be impossible for authentication authorities.
+	\item Tampering threats. Before giving access to resources, data integrity must be verified.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} The implementation of this pattern requires authentication to be based on what an entity knows, which is in this case its own history. For a successful authentication a set of questions must be answered by the requesting entity. Authenticators must be equipped with decent capabilities, knowledge and authority in order to fulfil their duties. Also by aggregating information about an entity from other depended-on entities, the authenticator's knowledge about a user's history is widened and the authentication process is aided by the collective memory. 
+
+
+\subsection{Permission Control~\cite{Reinfurt20172}} 
+\label{p:control}
+
+\paragraph{\textbf{Intent.}} The Permission Control pattern ensures that device owners can control which functionality or data a server or other communicating entity is able to obtain after their first connection. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Choice. All data rights are granted by the device owner. 
+	\item Granularity. There should be different permission levels.
+	\item Enforcement. Each choice of the user must be strictly followed.
+	\item Simplicity. The user interface must be easy to understand in order to be used correctly.
+	\item Updates. After changes the system has to ensure that only the newest set of choices is enforced.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} For a good Permission Control implementation make sure to ask the user for each device or entity, that is connecting for the first time to the backend server, which information or functionality is allowed to be shared. These choices must be stored on the server and be confirmed once a change in the system occurs.
+
+
+\subsection{Personal Zone Hub~\cite{Reinfurt20172}} 
+\label{p:hub}
+
+\paragraph{\textbf{Intent.}} The Personal Zone Hub is a control centre for device owners to manage permissions and data sharing between multiple gateways and clouds. 
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Ownership. The owner of personal data should be the one to grant access.
+	\item Manageability. It may be impractical to perform access control per device.
+	\item Trust. It is difficult to trust third parties with personal data administration.
+	\item Decentralization. In order to spread responsibilities and avoid vendor lock-in, it is better to utilize more than one party for data management.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} The best approach is to create a trusted, permanently addressable Personal Zone Hub as a central control unit for all devices, services, apps and other data. This way the user can share access to parts or all content that is managed by the zone. 
+
+
+\subsection{Relays~\cite{Fernandez2007}} 
+\label{p:relays}
+
+\paragraph{\textbf{Intent.}} The Relays pattern handles a system with electronically controlled switches.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Distinction. There exist two types: door relays and auxiliary relays.
+	\item Relays can be set to two states: on or off.
+	\item Activation period of a relay can be limited or indefinite.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} For a simple implementation a relay entity can be used. Further characteristics can then be added by generalizing the relay entity into door and auxiliary relays respectively. 
+
+
+\subsection{Single Access Point~\cite{Papoutsakis2021}} 
+\label{p:sap}
+
+\paragraph{\textbf{Intent.}} The Single Access Point is, like the name suggests, the only entry point into a system that grants access to authorized users.
+
+\paragraph{\textbf{Problem.}} The more entry points a system has, the easier it is for attackers to cause damage. 
+
+\paragraph{\textbf{Solution.}} A simple implementation of the Single Access Point involves checking the security policies when a user is requesting entry into the system. This way access control is enforced and the overall system security is increased. 
+
+
+\subsection{Whitelist~\cite{Reinfurt20172}} 
+\label{p:white}
+
+\paragraph{\textbf{Intent.}} The Whitelist is a tool to identify all trusted communication partners of a system and block the privileges of outsiders.
+
+\paragraph{\textbf{Problem.}} The solution is constrained by the following forces:
+\begin{itemize}
+	\item Prevention. Prevent future abuse.
+	\item Identification. Reliable identification of abusers.
+	\item Control. Manual adjustment of control mechanisms to define abusive behaviour.
+	\item Efficiency. Normal functionality of IoT devices should not be affected.
+\end{itemize}
+
+\paragraph{\textbf{Solution.}} All identifiers of communication partners are written on the Whitelist and can be modified via an administrative interface. Any user that is on the Whitelist and wants to access a resource is granted the privilege. If the communication partner is not on the list, the request is denied.

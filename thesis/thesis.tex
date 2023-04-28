@@ -1,178 +1,268 @@
-% !TeX spellcheck = en_GB
-% !TeX encoding = UTF-8
-
-% COMPILE WITH:
-% `latexmk`
-% You need lualatex and biber (in all TeXLive distributions)
-\documentclass[
-numbers=noenddot,
-%listof=totoc,
-parskip=half-,
-fontsize=12pt,
-paper=a4,
-oneside,
-titlepage,
-bibliography=totoc,
-chapterprefix=false,
-table
-%    draft
-]{scrbook}
-
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
-\usepackage{algorithmicx}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{graphicx}
-\usepackage{array}
-\usepackage{amsmath}
-\usepackage{pdflscape}
+\documentclass[fontsize=10pt,openright,oneside,paper=a4,BCOR=1cm,numbers=noenddot]{scrbook}
 
 
-%pgfplots
-\usepackage{pgfplots}
-\pgfplotsset{width=10cm,compat=1.9} 
-\usepgfplotslibrary{external}
-\tikzexternalize 
+\usepackage[top=3.5cm, bottom=3.5cm, left=3.0cm, right=4.0cm]{geometry}
+\usepackage{lipsum}
 
-% use lualatex or xelatex
-%\usepackage{fontspec}
-\usepackage{wrapfig}
-\usepackage[onehalfspacing]{setspace}
 
-% better language support
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
-%\setdefaultlanguage{german}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic definitions, to be adjusted individually
+\newcommand{\authornamefirst}{Eva}
+\newcommand{\authornamelast}{Gründinger}
+\newcommand{\matrikelnummer}{85500}
+\newcommand{\authorhomestreet}{Bärnbach 6}
+\newcommand{\authorpostalcodecity}{94116 Hutthurm}
 
-\usepackage{tocbasic}
-\usepackage{booktabs}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{paralist}
-\usepackage[]{scrlayer-scrpage}
+\newcommand{\worktitle}{The IoT Security Pattern Landscape: Collection and Analysis of state-of-the-art Security Patterns for IoT Development}
 
-% better bibliography (biblatex style)
-% use biber to compile
-\usepackage[citestyle=alphabetic, bibstyle=alphabetic, sorting=nyt, backend=biber, language=english, backref=true, maxcitenames=2]{biblatex}
+\newcommand{\thesistype}{Master's Thesis}
+% \newcommand{\thesistype}{Bachelor's Thesis}
+\newcommand{\courseofstudies}{Computer Science}
 
-% better quotes
-% use \enquote{text}
-\usepackage[autostyle,english=american,german=quotes]{csquotes}
-\addbibresource{bibliography.bib}
+\newcommand{\thesisdate}{2023-03-22}   %% in ISO 8601 format
 
-% appendix
-\usepackage[titletoc]{appendix}
-\usepackage[T1]{fontenc}
-\usepackage{siunitx}
-\usepackage{float}
+\newcommand{\thesisprof}{Prof. Dr. Stefan Katzenbeisser}
+\newcommand{\thesisproftwo}{Prof. Dr. Joachim Posegga}
+\newcommand{\chair}{\mbox{Chair of Computer Engineering}}
+\newcommand{\secondchair}{Chair of IT Security}
+
+\newcommand{\advisor}{Felix Klement}
+
+
+\newcommand{\contactprofone}{
+\thesisprof \\
+\chair \\
+University of Passau \\
+Email:~{\small \url{stefan.katzenbeisser@uni-passau.de}}  \\
+Web:~{\small
+\url{https://www.fim.uni-passau.de/en/computer-engineering}}\\}
+
+
+\newcommand{\contactproftwo}{
+\thesisproftwo \\
+\secondchair \\
+University of Passau \\
+Email:~{\small \url{Joachim.Posegga@uni-passau.de}}  \\
+Web:~{\small
+\url{https://www.sec.uni-passau.de/en}}\\}
+
+
+%\newcommand{\drosera}{\textit{Drosera}\xspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PACKAGES:
+
+\usepackage{color}
+\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+\usepackage{xargs}
+
+\newcommandx{\mytodo}[2][1=]{\todo[linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,inline,#1]{#2}}
+
+% Use English :
+
+% Use list of tabels, etc. in table of contents:
+\usepackage[nottoc]{tocbibind}
+% German paragraph skip
+\usepackage{parskip}
+% Encoding. Use utf8. We are now in the 21st century already... :-)
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\usepackage{subfiles}
-\usepackage{subfig}
-%\usepackage[table]{xcolor}
+% Index-generation
+\usepackage{makeidx}
+% Einbinden von URLs:
+\usepackage{url}
+% Special \LaTex symbols (e.g. \BibTeX):
+\usepackage{doc}
+% Include Graphic-files:
+%\usepackage{graphics}
+% Include Graphic-files:
+\usepackage{graphicx}
+% Include doc++ generated tex-files:
+%\usepackage{docxx}
+% Include PDF links
+\usepackage{listings}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage{multirow}
+%mathstuff
+\usepackage[cmex10]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{pgf-pie}
+\usepackage{subfigure} 
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{pdfpages}
+\usepackage{multicol}
+\usepackage{xspace}
+\newcounter{mtpage}
+\newcommand{\q}[1]{``#1''}
 
-% where to put all images and figures
-\graphicspath{{images/}}
+%hyperref for nice PDF output
+\usepackage[pdftex, 
+bookmarks=true,
+pdfauthor={{{\authornamefirst \authornamelast}}},
+pdftitle={{{\worktitle}}},
+hidelinks
+]{hyperref}
 
-% Title
-\title{IT Security}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Author
-\author{Eva Gründinger}
+% OTHER SETTINGS:
 
-% Date
-\date{\today}
+% Pagestyle:
+\pagestyle{headings}
 
-% CHOOSE ACCORDINGLY
-\newcommand{\thesisType}{master's thesis}
+% Avoid 'overhang':
+\sloppy
 
-\makeatletter
-\let\thetitle\@title
-\let\theauthor\@author
-\let\thedate\@date
-\makeatother
+% Choose language
+\newcommand{\setlang}[1]{\selectlanguage{#1}\nonfrenchspacing}
 
-\pagestyle{scrheadings}
+\usepackage[english]{babel}
+
+\setlang{english}
+%\setlang{german}
+
+\usepackage[Bjornstrup]{fncychap}
+
+\definecolor{bblue}{HTML}{00A2FF}
+\definecolor{rred}{HTML}{FF2600}
+\definecolor{ggreen}{HTML}{61D836}
+\definecolor{ppurple}{HTML}{C24885}
+\definecolor{oorange}{HTML}{F8BA00}
+\definecolor{ggray}{HTML}{5F5F5F}
+\definecolor{ppink}{HTML}{e81cbf}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TITLE:
 
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
-% CHOOSE ACCORDINGLY
-\include{include/MA-titlepage}
+\thispagestyle{empty}
+\newpage
 
-\phantomsection
-\addcontentsline{toc}{chapter}{Contents}
+\vspace{1cm}
+
+\begin{center}
+\begin{tabular}{lr}
+\includegraphics[width=6.5cm]{img/logouni_en.png}
+\end{tabular}
+
+\vspace{3cm}
+\Large University of Passau
+\\
+\Large Faculty of Computer Science and Mathematics
+\\
+\vspace{0.3cm}
+\Large {\chair }
+\\
+\Large \thesisprof
+
+\end{center}
+
+
+\vspace{2.5cm}
+
+\begin{center}
+        % Master's thesis, Bachelor's thesis, Programming project
+        {\Large \thesistype\\ in \\ \courseofstudies} 
+\end{center}
+
+\begin{center}
+        \settowidth{\baselineskip}{0.4cm}
+        {\LARGE \textbf{\worktitle}}
+        \\
+        {\Large
+        \vspace{1cm}
+        \authornamefirst~\authornamelast \\ \matrikelnummer \\
+        }
+\end{center}
+
+\vfill {% \settowidth{\baselineskip}{0.2cm}
+
+\vfill
+
+
+{\large
+\begin{tabular}[l]{llll}
+
+Date:       & \thesisdate %%(\LaTeX{}$2_\epsilon$ run \today)
+\smallskip \\
+Supervisors:   & \thesisprof \\
+	& \thesisproftwo \\
+Advisor: & \advisor \\
+\end{tabular}}
+} \cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{legals}
+
+% MAIN PART:
+
+% Abstract. 
+\include{chapters/abstract}
+
+% Table of contents
 \tableofcontents
-\newpage
+
+% Main body of thesis
+\mainmatter
+\include{chapters/introduction}
+\include{chapters/background}
+\include{chapters/related}
+\include{chapters/design}
+\include{chapters/implementation}
+\include{chapters/evaluation}
+\include{chapters/conclusions}
+
+%\appendix
+%\include{chapters/appendix}
 
 
 
-
-% -- ABSTRACT
-\input{mycommands.tex}
-\phantomsection
-\addcontentsline{toc}{chapter}{Abstract}
-\include{include/abstract}
-\newpage
-
-% -- Acknowledgements (optional)
-%\include{includes/acknowledgements}
-\newpage
-
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
-% -- List of figures
-\thispagestyle{empty}
-\cleardoublepage
 \listoffigures
-\newpage
-
-%% -- List of algorithms
-%\thispagestyle{empty}
-%\cleardoublepage
-%%\listofalgorithms
-%\newpage
-
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-% -- List of tables
-\thispagestyle{empty}
-\cleardoublepage
 \listoftables
 
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mainmatter
-
-% -- Chapters
-% following IMRaD structure
-% adjust for your liking
-\include{chapters/1_introduction}
-\include{chapters/2_background}
-\include{chapters/3_methods}
-\include{chapters/4_results}
-\include{chapters/5_related-work}
-\include{chapters/6_conclusion}
-
-% -- Appendix (optional)
-%\begin{appendices}
-%    \input{appendix.tex}
-%\end{appendices}
-%\newpage
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\backmatter
-
-% -- Bibliography
-\printbibliography
-
-% -- Eidesstattliche Erklärung (= Affadavit)
-\include{include/affidavit}
+% References (Literaturverzeichnis):
+% a) Style (with numbers: use unsrt):
+\bibliographystyle{alpha}
+% b) The File:
+\bibliography{Bibliography}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
